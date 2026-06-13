@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO最適化 -->
+  <title>Google AI For Work 2026 - 明日からの業務を10倍効率化するAIガイド</title>
+  <meta name="description" content="Google I/O 2026で発表された最新AI（Gemini 3.5、Gemini Sparkなど）を活用し、業務効率化をスタートするための初心者向けガイドです。簡単診断であなたに最適なAIツールを見つけましょう。">
+  <meta name="keywords" content="Google I/O 2026, Google AI, Gemini 3.5, Gemini Spark, 業務効率化, 生産性向上, AI初心者">
+  
+  <!-- OGP -->
+  <meta property="og:title" content="Google AI For Work 2026 - 業務を効率化するAIガイド">
+  <meta property="og:description" content="Google I/O 2026 of 最新AIツールを使った業務効率化ロードマップ。">
+  <meta property="og:type" content="website">
+  
+  <!-- スタイルシート -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+  <!-- ヘッダーナビゲーション -->
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo" id="nav-logo">
+        Google AI <span class="text-gradient">For Work</span>
+        <div class="logo-dot"></div>
+      </a>
+      <nav>
+        <button class="hamburger-menu" id="hamburger-btn" aria-label="メニューを開く">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#performance" id="link-performance">性能比較</a></li>
+          <li><a href="#diagnostics" id="link-diagnostics">AI診断</a></li>
+          <li><a href="#features" id="link-features">最新ツール紹介</a></li>
+          <li><a href="#steps" id="link-steps">導入3ステップ</a></li>
+          <li><a href="#pricing" id="link-pricing">料金プラン</a></li>
+          <li><a href="#faq" id="link-faq">よくある質問</a></li>
+          <li><a href="#diagnostics" class="nav-btn" id="btn-nav-start">診断を始める</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+ 
+  <!-- ヒーローセクション -->
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <div class="badge" id="hero-badge">
+        <span class="badge-dot"></span>
+        Google I/O 2026 最新アップデート対応
+      </div>
+      <h1 id="hero-title">あなたの仕事に、<br><span class="text-gradient">AIのスパークを。</span></h1>
+      <p id="hero-desc">Google I/O 2026で発表された革新的なAI技術。「難しそう」「何から始めればいいかわからない」と感じていませんか？簡単な質問に答えるだけで、あなたの業務に最適なAIツールを提案します。</p>
+      <div class="hero-btns">
+        <a href="#diagnostics" class="btn btn-primary" id="btn-hero-quiz">1分でわかるAI診断</a>
+        <a href="#features" class="btn btn-secondary" id="btn-hero-learn">最新ツールを見る</a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- AIモデル性能比較セクション -->
+  <section class="performance" id="performance">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>圧倒的なパフォーマンスと処理速度</h2>
+        <p>Googleの最新AIは、他社フラッグシップモデルに匹敵する「高い知能」を維持しながら、数倍の「圧倒的な出力速度」を実現しています。日々の業務での待ち時間を最小化します。</p>
+      </div>
+      
+      <div class="chart-container reveal" id="perf-chart-container">
+        <div class="chart-y-axis-title">AIの知能指数 (Intelligence Index)</div>
+        
+        <div class="chart-area-wrapper">
+          <!-- Y軸目盛り -->
+          <div class="chart-y-ticks">
+            <span>70</span>
+            <span>60</span>
+            <span>50</span>
+            <span>40</span>
+            <span>30</span>
+          </div>
+          
+          <!-- プロット領域 -->
+          <div class="chart-plot-area" id="chart-plot-area">
+            <!-- グリッドライン -->
+            <div class="chart-grid-h" style="bottom: 25%;"></div>
+            <div class="chart-grid-h" style="bottom: 50%;"></div>
+            <div class="chart-grid-h" style="bottom: 75%;"></div>
+            
+            <!-- 各モデルのプロット点 -->
+            <!-- Gemini 3.5 Flash (最も目立たせる) -->
+            <div class="chart-dot highlight pulse" style="left: 78.3%; bottom: 67.5%;" data-model="Gemini 3.5 Flash" data-speed="285" data-intel="57" data-desc="他社最上位に匹敵する知能と、圧倒的な出力速度(285 tokens/S)を両立。実業務で圧倒的に快適です。">
+              <span class="dot-marker">✦</span>
+              <span class="dot-label">Gemini 3.5 Flash</span>
+            </div>
+            
+            <div class="chart-dot google" style="left: 28.3%; bottom: 67.5%;" data-model="Gemini 3.1 Pro" data-speed="135" data-intel="57" data-desc="高い知能と実用性を兼ね備えたプロフェッショナルモデル。">
+              <span class="dot-marker">✦</span>
+              <span class="dot-label">3.1 Pro</span>
+            </div>
+ 
+            <div class="chart-dot google" style="left: 41.6%; bottom: 40%;" data-model="Gemini 3" data-speed="175" data-intel="46" data-desc="高速かつ手軽に使える前世代の軽量モデル。">
+              <span class="dot-marker">✦</span>
+              <span class="dot-label">3 Flash</span>
+            </div>
+ 
+            <div class="chart-dot google" style="left: 95.0%; bottom: 10%;" data-model="Gemini 3.1 Flash-Lite" data-speed="335" data-intel="34" data-desc="超高速で単純タスクを処理する軽量・低コストモデル。">
+              <span class="dot-marker">✦</span>
+              <span class="dot-label">3.1 Flash-Lite</span>
+            </div>
+ 
+            <div class="chart-dot competitor" style="left: 6.6%; bottom: 75.0%;" data-model="GPT-5.5 (xhigh)" data-speed="70" data-intel="60" data-desc="他社の最上位モデル。知能は高いが出力速度が遅く、待ち時間が発生します。">
+              <span class="dot-marker">●</span>
+              <span class="dot-label">GPT-5.5 (xhigh)</span>
+            </div>
+ 
+            <div class="chart-dot competitor" style="left: 38.3%; bottom: 47.5%;" data-model="GPT-5.4 mini (xhigh)" data-speed="165" data-intel="49" data-desc="他社の中位軽量モデル。">
+              <span class="dot-marker">●</span>
+              <span class="dot-label">GPT-5.4 mini (xhigh)</span>
+            </div>
+ 
+            <div class="chart-dot competitor" style="left: 3.3%; bottom: 67.5%;" data-model="Claude Opus 4.7 (max)" data-speed="60" data-intel="57" data-desc="他社のフラッグシップモデル。知能は高いが応答速度が低速です。">
+              <span class="dot-marker">●</span>
+              <span class="dot-label">Claude Opus 4.7 (max)</span>
+            </div>
+ 
+            <div class="chart-dot competitor" style="left: 6.6%; bottom: 55%;" data-model="Claude Sonnet 4.6 (max)" data-speed="70" data-intel="52" data-desc="他社の標準ビジネスモデル。">
+              <span class="dot-marker">●</span>
+              <span class="dot-label">Claude Sonnet 4.6 (max)</span>
+            </div>
+ 
+            <div class="chart-dot competitor" style="left: 21.6%; bottom: 17.5%;" data-model="Claude 4.5 Haiku" data-speed="115" data-intel="37" data-desc="他社の最軽量・高速モデル。">
+              <span class="dot-marker">●</span>
+              <span class="dot-label">Claude 4.5 Haiku</span>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- X軸目盛り -->
+        <div class="chart-x-ticks">
+          <span>50</span>
+          <span>100</span>
+          <span>150</span>
+          <span>200</span>
+          <span>250</span>
+          <span>300</span>
+          <span>350</span>
+        </div>
+        <div class="chart-x-axis-title">出力速度 (tokens/S)</div>
+        
+        <!-- ツールチップポップアップ -->
+        <div class="chart-tooltip" id="chart-tooltip">
+          <h4 id="tooltip-model">モデル名</h4>
+          <div class="tooltip-stats">
+            <span>速度: <strong id="tooltip-speed">0</strong> tokens/S</span>
+            <span>知能: <strong id="tooltip-intel">0</strong></span>
+          </div>
+          <p id="tooltip-desc">説明文</p>
+        </div>
+      </div>
+      
+      <div class="chart-analysis reveal">
+        <div class="analysis-card">
+          <h3>📊 グラフが示す「Gemini 3.5 Flash」の革新性</h3>
+          <p>従来の生成AIは、<strong>「賢くすると速度が遅くなる（GPT-5.5やClaude Opusのように処理待ちが発生する）」</strong>か、または<strong>「速くすると単純なことしかできない」</strong>というトレードオフがありました。</p>
+          <p>しかし、Google I/O 2026で発表された<strong>Gemini 3.5 Flash</strong>は、他社の最上位フラッグシップモデルと同等の知能レベル（約57ポイント）でありながら、出力速度は<strong>4〜5倍（約285 tokens/S）</strong>という驚異的な数値を叩き出しています。これは「文章作成」「大量 of データ分析」「即時チャット」などのビジネス業務において、ストレスを全く感じさせない速度と高いクオリティを両立していることを意味します。</p>
+        </div>
+      </div>
+ 
+      <!-- ベンチマーク詳細比較 -->
+      <div class="benchmark-section reveal">
+        <div class="benchmark-header">
+          <h3>📈 分野別評価ベンチマーク詳細</h3>
+          <p>主要なAIモデルとの知能・処理性能比較。Gemini 3.5 Flash（軽量高速）は、他社最上位フラッグシップモデル（GPT-5.5、Claude Opus 4.7）に匹敵、またはそれを上回る結果を出しています。</p>
+        </div>
+        
+        <div class="table-responsive">
+          <table class="benchmark-table">
+            <thead>
+              <tr>
+                <th>分野 / ベンチマーク項目</th>
+                <th class="highlight-col">Gemini 3.5 Flash</th>
+                <th>Gemini 3 Flash</th>
+                <th>Gemini 3.1 Pro</th>
+                <th>Claude Sonnet 4.6</th>
+                <th>Claude Opus 4.7</th>
+                <th>GPT-5.5</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Coding -->
+              <tr class="category-row">
+                <td colspan="7">💻 Coding (コーディング性能)</td>
+              </tr>
+              <tr>
+                <td><strong>Terminal-bench 2.1</strong><br><small>エージェント型ターミナルコーディング</small></td>
+                <td class="highlight-col">76.2%</td>
+                <td>58.0%</td>
+                <td>70.3%</td>
+                <td>-</td>
+                <td>66.1%</td>
+                <td class="best-score">78.2%</td>
+              </tr>
+              <tr>
+                <td><strong>SWE-Bench Pro (Public)</strong><br><small>多様なエージェント型開発タスク</small></td>
+                <td class="highlight-col">55.1%</td>
+                <td>49.6%</td>
+                <td>54.2%</td>
+                <td>-</td>
+                <td class="best-score">64.3%</td>
+                <td>58.6%</td>
+              </tr>
+              
+              <!-- Agentic -->
+              <tr class="category-row">
+                <td colspan="7">🤖 Agentic (自律エージェント能力)</td>
+              </tr>
+              <tr>
+                <td><strong>MCP Atlas</strong><br><small>複数ステップの外部ツール連携</small></td>
+                <td class="highlight-col best-score">83.6%</td>
+                <td>62.0%</td>
+                <td>78.2%</td>
+                <td>69.5%</td>
+                <td>79.1%</td>
+                <td>75.3%</td>
+              </tr>
+              <tr>
+                <td><strong>Toolathlon</strong><br><small>実世界ツール実用テスト</small></td>
+                <td class="highlight-col best-score">56.5%</td>
+                <td>49.4%</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>55.6%</td>
+              </tr>
+ 
+              <!-- UI Control -->
+              <tr class="category-row">
+                <td colspan="7">🖥️ UI Control (画面操作性能)</td>
+              </tr>
+              <tr>
+                <td><strong>OSWorld-Verified</strong><br><small>PCの自律UI操作</small></td>
+                <td class="highlight-col">78.4%</td>
+                <td>65.1%</td>
+                <td>76.2%</td>
+                <td>72.5%</td>
+                <td>78.0%</td>
+                <td class="best-score">78.7%</td>
+              </tr>
+ 
+              <!-- Expert Tasks -->
+              <tr class="category-row">
+                <td colspan="7">📊 Expert Tasks (専門業務タスク)</td>
+              </tr>
+              <tr>
+                <td><strong>Finance Agent v2</strong><br><small>財務分析および意思決定</small></td>
+                <td class="highlight-col best-score">57.9%</td>
+                <td>42.6%</td>
+                <td>43.0%</td>
+                <td>51.0%</td>
+                <td>51.5%</td>
+                <td>51.8%</td>
+              </tr>
+              <tr>
+                <td><strong>GDPval-AA</strong><br><small>経済価値のあるナレッジワーク</small></td>
+                <td class="highlight-col">1656</td>
+                <td>1204</td>
+                <td>1314</td>
+                <td>1676</td>
+                <td>1753</td>
+                <td class="best-score">1769</td>
+              </tr>
+ 
+              <!-- Multimodal -->
+              <tr class="category-row">
+                <td colspan="7">👁️ Multimodal (マルチモーダル理解)</td>
+              </tr>
+              <tr>
+                <td><strong>CharXiv Reasoning</strong><br><small>複雑な図表からの推論</small></td>
+                <td class="highlight-col best-score">84.2%</td>
+                <td>80.3%</td>
+                <td>83.3%</td>
+                <td>72.4%</td>
+                <td>82.1%</td>
+                <td>84.1%</td>
+              </tr>
+              <tr>
+                <td><strong>MMMU-Pro</strong><br><small>高度な画像・文章理解</small></td>
+                <td class="highlight-col best-score">83.6%</td>
+                <td>81.2%</td>
+                <td>80.5%</td>
+                <td>74.5%</td>
+                <td>75.2%</td>
+                <td>81.2%</td>
+              </tr>
+              <tr>
+                <td><strong>Blueprint-Bench 2</strong><br><small>空間・設計図の推論</small></td>
+                <td class="highlight-col">33.6%</td>
+                <td>0.0%</td>
+                <td>26.5%</td>
+                <td>6.7%</td>
+                <td>24.5%</td>
+                <td class="best-score">36.2%</td>
+              </tr>
+ 
+              <!-- Long Context -->
+              <tr class="category-row">
+                <td colspan="7">📚 Long Context (長文コンテキスト処理)</td>
+              </tr>
+              <tr>
+                <td><strong>MRCR v2 (128k平均)</strong><br><small>約9万文字の文章内の長文情報検索</small></td>
+                <td class="highlight-col">77.3%</td>
+                <td>67.2%</td>
+                <td>84.9%</td>
+                <td>84.9%</td>
+                <td>59.3%</td>
+                <td class="best-score">94.8%</td>
+              </tr>
+              <tr>
+                <td><strong>MRCR v2 (1M)</strong><br><small>約70万文字の超長文情報検索</small></td>
+                <td class="highlight-col best-score">26.6%</td>
+                <td>22.1%</td>
+                <td>26.3%</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+ 
+              <!-- Reasoning -->
+              <tr class="category-row">
+                <td colspan="7">🧠 Reasoning (高度な論理推論)</td>
+              </tr>
+              <tr>
+                <td><strong>Humanity's Last Exam</strong><br><small>最高学術レベル of 難問試験</small></td>
+                <td class="highlight-col">40.2%</td>
+                <td>33.7%</td>
+                <td>44.4%</td>
+                <td>33.2%</td>
+                <td class="best-score">46.9%</td>
+                <td>41.4%</td>
+              </tr>
+              <tr>
+                <td><strong>ARC-AGI-2</strong><br><small>抽象的な思考パズル</small></td>
+                <td class="highlight-col">72.1%</td>
+                <td>33.6%</td>
+                <td>77.1%</td>
+                <td>58.3%</td>
+                <td>75.8%</td>
+                <td class="best-score">84.6%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="benchmark-footer">
+          出典：<a href="https://deepmind.google/models/evals-methodology/gemini-3-5-flash/" target="_blank">Google DeepMind - Gemini 3.5 Flash Evails Methodology</a>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- AI業務診断セクション -->
+  <section class="diagnostics" id="diagnostics">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>かんたんAI業務診断</h2>
+        <p>日々の仕事での悩みを選ぶだけで、あなたを強力にサポートするGoogleのAIツールと、具体的な活用シナリオを提案します。</p>
+      </div>
+ 
+      <!-- クイズコンテナ -->
+      <div class="quiz-container reveal" id="quiz-wrapper">
+        
+        <!-- ステップ 1 -->
+        <div class="quiz-step active" id="step-1" data-step="1">
+          <div class="quiz-progress">
+            <div class="progress-dot active"></div>
+            <div class="progress-dot"></div>
+            <div class="progress-dot"></div>
+          </div>
+          <h3 class="quiz-question">Q1. あなたの主な職種、または普段最も時間を使っている業務は何ですか？</h3>
+          <div class="quiz-options">
+            <button class="option-btn" data-value="office" id="opt-1-1">
+              <span class="option-icon">💼</span>
+              <span>事務・オフィスワーク（書類作成や調整）</span>
+            </button>
+            <button class="option-btn" data-value="sales" id="opt-1-2">
+              <span class="option-icon">📈</span>
+              <span>営業・マーケティング（提案書や調査）</span>
+            </button>
+            <button class="option-btn" data-value="creator" id="opt-1-3">
+              <span class="option-icon">🎨</span>
+              <span>クリエイター・開発者（制作や分析）</span>
+            </button>
+            <button class="option-btn" data-value="manager" id="opt-1-4">
+              <span class="option-icon">👥</span>
+              <span>マネジメント・管理職（メールや会議調整）</span>
+            </button>
+          </div>
+        </div>
+ 
+        <!-- ステップ 2 -->
+        <div class="quiz-step" id="step-2" data-step="2">
+          <div class="quiz-progress">
+            <div class="progress-dot active"></div>
+            <div class="progress-dot active"></div>
+            <div class="progress-dot"></div>
+          </div>
+          <h3 class="quiz-question">Q2. 日々の仕事で、最も「面倒だ」「時間を削減したい」と感じることは？</h3>
+          <div class="quiz-options">
+            <button class="option-btn" data-value="email" id="opt-2-1">
+              <span class="option-icon">✉️</span>
+              <span>メールの返信やスケジュール調整</span>
+            </button>
+            <button class="option-btn" data-value="document" id="opt-2-2">
+              <span class="option-icon">📝</span>
+              <span>提案書や報告書などの文章・スライド作成</span>
+            </button>
+            <button class="option-btn" data-value="research" id="opt-2-3">
+              <span class="option-icon">🔍</span>
+              <span>動画やWebからの情報収集・リサーチ</span>
+            </button>
+            <button class="option-btn" data-value="ideas" id="opt-2-4">
+              <span class="option-icon">💡</span>
+              <span>企画出しやアイデア発想</span>
+            </button>
+          </div>
+        </div>
+ 
+        <!-- ステップ 3 -->
+        <div class="quiz-step" id="step-3" data-step="3">
+          <div class="quiz-progress">
+            <div class="progress-dot active"></div>
+            <div class="progress-dot active"></div>
+            <div class="progress-dot active"></div>
+          </div>
+          <h3 class="quiz-question">Q3. AIを使う上で、あなたが一番重視したいことは何ですか？</h3>
+          <div class="quiz-options">
+            <button class="option-btn" data-value="easy" id="opt-3-1">
+              <span class="option-icon">⚡</span>
+              <span>とにかく簡単で、設定なしですぐに使えること</span>
+            </button>
+            <button class="option-btn" data-value="quality" id="opt-3-2">
+              <span class="option-icon">🎯</span>
+              <span>高品質で正確な資料・コンテンツを作成すること</span>
+            </button>
+            <button class="option-btn" data-value="speed" id="opt-3-3">
+              <span class="option-icon">🚀</span>
+              <span>大量の情報からスピーディに必要な点だけ抽出すること</span>
+            </button>
+            <button class="option-btn" data-value="custom" id="opt-3-4">
+              <span class="option-icon">⚙️</span>
+              <span>自分の業務に合わせたカスタマイズや拡張ができること</span>
+            </button>
+          </div>
+        </div>
+ 
+        <!-- 結果表示 -->
+        <div class="quiz-step quiz-result" id="step-result">
+          <h3 class="quiz-question">診断結果</h3>
+          <p>あなたにおすすめのGoogle AIツールはこれです！</p>
+          
+          <div class="result-card">
+            <div class="result-tool-name" id="result-tool-name">Gemini Spark</div>
+            <p class="result-desc" id="result-tool-desc">24時間365日、あなたのスケジュール管理やメール処理を自動でサポートする専属アシスタント。</p>
+            
+            <div class="result-usecase">
+              <h4 id="result-usecase-title">💡 おすすめの活用方法</h4>
+              <p id="result-usecase-desc">「今日のスケジュールを最適化して」「取引先への丁寧な返信下書きを作って」と伝えるだけで、カレンダーやGmailと連携して自動処理します。</p>
+            </div>
+          </div>
+ 
+          <div style="display: flex; gap: 1rem; justify-content: center;">
+            <button class="btn btn-primary" id="btn-restart-quiz">もう一度診断する</button>
+            <a href="#features" class="btn btn-secondary" id="btn-result-detail">ツールの詳細を見る</a>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- 主要機能（カード）セクション -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Google I/O 2026で登場した4大AIツール</h2>
+        <p>業務効率を圧倒的に高める、日常使いに最適な新機能のポイントを整理しました。</p>
+      </div>
+ 
+      <div class="features-grid">
+        <!-- Gemini Spark -->
+        <div class="feature-card spark reveal">
+          <div class="feature-icon">✨</div>
+          <h3>Gemini Spark</h3>
+          <p>Gmailやカレンダー、ドライブと自律的に連携。あなたの指示に従ってメールの要約や返信の下書き、スケジュールの自動調整を行う、24時間常駐型の「パーソナルAIアシスタント」です。</p>
+          <span class="feature-tag">超簡単・業務自動化</span>
+        </div>
+ 
+        <!-- Gemini 3.5 Flash / Omni -->
+        <div class="feature-card gemini reveal">
+          <div class="feature-icon">⚡</div>
+          <h3>Gemini 3.5 Flash / Omni</h3>
+          <p>テキスト、音声、画像、さらにはソースコードまで、あらゆるデータを瞬時に処理。超高速な応答速度を誇り、膨大なPDF資料の要約やデータ分析をワンタップで完了させます。</p>
+          <span class="feature-tag">高速処理・マルチモーダル</span>
+        </div>
+ 
+        <!-- Docs Live -->
+        <div class="feature-card docs reveal">
+          <div class="feature-icon">📝</div>
+          <h3>Docs Live</h3>
+          <p>Googleドキュメント内でAIがあなたの執筆スタイルに合わせて、リアルタイムに文章を共同執筆・編集します。企画書、報告書、ブログ記事などの「ドラフト作成」を一瞬で終わらせます。</p>
+          <span class="feature-tag">文章・ドキュメント作成</span>
+        </div>
+ 
+        <!-- Ask YouTube -->
+        <div class="feature-card youtube reveal">
+          <div class="feature-icon">🎥</div>
+          <h3>Ask YouTube</h3>
+          <p>動画コンテンツをすべて見る必要はありません。動画を指定して「このセミナー動画の重要なポイントを3つで教えて」「◯分頃に何を話している？」と問いかけるだけで、一瞬で回答を引き出せます。</p>
+          <span class="feature-tag">動画リサーチ・情報収集</span>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ロードマップ・ステップアップ -->
+  <section class="steps" id="steps">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>今日から始める、AI業務効率化3ステップ</h2>
+        <p>準備は不要です。今日からステップバイステップでAIを自分の手足のように使いこなしましょう。</p>
+      </div>
+ 
+      <div class="steps-list">
+        <div class="step-item reveal">
+          <div class="step-num">01</div>
+          <div class="step-text">
+            <h3>いつものツール（Workspace）でAIボタンを押してみる</h3>
+            <p>GmailやGoogleドキュメントの右側にあるサイドパネル、あるいは入力欄の「ペンシルアイコン（執筆支援）」をクリックしてみてください。まずは「このメールを要約して」「カジュアルな返信を作って」と簡単な命令を出すことから始まります。</p>
+          </div>
+        </div>
+ 
+        <div class="step-item reveal">
+          <div class="step-num">02</div>
+          <div class="step-text">
+            <h3>「Gemini Spark」に毎朝のタスク整理を任せる</h3>
+            <p>出社したらまず「今日のタスクで優先順位が高いものは？」「返信が必要な未読メールをピックアップして」とGemini Sparkに尋ねましょう。一日の流れをAIが整理してくれます。</p>
+          </div>
+        </div>
+ 
+        <div class="step-item reveal">
+          <div class="step-num">03</div>
+          <div class="step-text">
+            <h3>リサーチ時間を「Ask YouTube」で半分にする</h3>
+            <p>新しい業界知識や競合情報を集める際、1時間を超える解説動画や発表動画をすべて見る代わりに、Ask YouTubeを使って要点だけをピンポイントで抽出し、学習スピードを加速させましょう。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- 料金プランセクション -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>明快な料金プラン</h2>
+        <p>ビジネスの規模や利用頻度に合わせて選べるプラン。まずは無料から始められます。</p>
+        
+        <div class="pricing-tabs">
+          <button class="pricing-tab-btn active" data-target="gemini-pricing" id="tab-gemini">Gemini プラン</button>
+          <button class="pricing-tab-btn" data-target="notebook-pricing" id="tab-notebook">NotebookLM プラン</button>
+        </div>
+      </div>
+ 
+      <!-- Gemini 料金表 -->
+      <div class="pricing-content active reveal" id="gemini-pricing">
+        <div class="pricing-grid">
+          <!-- 無料プラン -->
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h3>無料プラン</h3>
+              <p>日常の簡単な作業に</p>
+              <div class="price">¥0 <span>/ 月</span></div>
+            </div>
+            <ul class="price-features">
+              <li>標準モデル (Gemini 3 Flashなど) へのアクセス</li>
+              <li>メール作成、テキスト要約などの基本機能</li>
+              <li>Googleアカウントがあれば今すぐ利用可能</li>
+              <li>日常的な利用枠内での提供</li>
+            </ul>
+            <a href="https://gemini.google.com/" target="_blank" class="btn btn-secondary pricing-btn">今すぐ試す</a>
+          </div>
+ 
+          <!-- Google AI Pro (AI Premium) -->
+          <div class="pricing-card featured">
+            <div class="featured-badge">おすすめ</div>
+            <div class="pricing-card-header">
+              <h3>Google AI Pro</h3>
+              <p>業務効率を本格的に高めるプロ仕様</p>
+              <div class="price">¥2,900 <span>/ 月</span></div>
+              <p class="price-dollar">(約 $19.99/月)</p>
+            </div>
+            <ul class="price-features">
+              <li>最新最上位の <strong>Gemini Proモデル</strong> へのフルアクセス</li>
+              <li>Gmail、Docs、スライド等での <strong>AI共同執筆 (Workspace連携)</strong></li>
+              <li>高度な長文リサーチ（Deep Research機能）</li>
+              <li><strong>NotebookLM Pro</strong> 機能の自動付帯</li>
+              <li>Googleドライブなどのクラウド容量 2TB 付属</li>
+            </ul>
+            <a href="https://one.google.com/" target="_blank" class="btn btn-primary pricing-btn">無料トライアルを開始</a>
+          </div>
+ 
+          <!-- Google AI Ultra -->
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h3>Google AI Ultra</h3>
+              <p>パワーユーザー・エンジニア向け</p>
+              <div class="price">¥15,000〜 <span>/ 月</span></div>
+              <p class="price-dollar">($100〜$200/月)</p>
+            </div>
+            <ul class="price-features">
+              <li>プロプランの最大 <strong>5〜20倍</strong> の高度な利用制限</li>
+              <li>次世代エージェント・プラットフォームへの優先アクセス</li>
+              <li>Google Antigravityを用いたカスタムAIの開発・連携</li>
+              <li>専属技術サポート</li>
+              <li>最大 20TB までの拡張ストレージ（選択可）</li>
+            </ul>
+            <a href="https://one.google.com/" target="_blank" class="btn btn-secondary pricing-btn">詳細を見る</a>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- NotebookLM 料金表 -->
+      <div class="pricing-content reveal" id="notebook-pricing">
+        <div class="pricing-grid notebook-grid">
+          <!-- 無料プラン -->
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h3>NotebookLM 無料版</h3>
+              <p>個人の勉強やリサーチに</p>
+              <div class="price">¥0 <span>/ 月</span></div>
+            </div>
+            <ul class="price-features">
+              <li>Googleアカウントで即時利用可能</li>
+              <li>最大 100個 のノートブック作成</li>
+              <li>1ノートブックあたり最大 50個 のソース（PDF、URL等）</li>
+              <li>資料を元にした高精度な要約・チャット</li>
+              <li>音声で対話する「Audio Overviews」の基本利用</li>
+            </ul>
+            <a href="https://notebooklm.google.com/" target="_blank" class="btn btn-secondary pricing-btn">使ってみる</a>
+          </div>
+ 
+          <!-- NotebookLM Pro / Plus -->
+          <div class="pricing-card featured">
+            <div class="featured-badge">Google AI Proに内包</div>
+            <div class="pricing-card-header">
+              <h3>NotebookLM Pro</h3>
+              <p>大量の資料を処理するビジネスパーソン向け</p>
+              <div class="price">¥2,900 <span>/ 月</span></div>
+              <p class="price-sub text-muted">※Google AI Pro (AI Premium) に含まれます</p>
+            </div>
+            <ul class="price-features">
+              <li>ノートブック数・ソース数の上限を大幅緩和（最大500+）</li>
+              <li>より高度な分析を可能にする専用AIリサーチモード</li>
+              <li>スライド資料やインフォグラフィックスなどの自動生成</li>
+              <li>学割オプション（米国等で50%割引）も用意</li>
+              <li>複数人でのソース共同編集・チーム共有機能</li>
+            </ul>
+            <a href="https://one.google.com/" target="_blank" class="btn btn-primary pricing-btn">Google AI Proで利用する</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- FAQセクション -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>よくある質問</h2>
+        <p>AIを使うのが初めての方や、仕事での安全性が気になる方向けのQ&Aです。</p>
+      </div>
+ 
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>Q. AIに仕事のデータを入力しても、セキュリティや漏洩の心配はありませんか？</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Google Workspaceで使用するGeminiおよび各AI機能は、エンタープライズグレードのセキュリティとプライバシー保護が施されています。入力したお客様のデータが外部に漏洩したり、一般のAIモデルの追加学習に使用されたりすることはありませんので、安心してビジネスにご活用いただけます。</p>
+          </div>
+        </div>
+ 
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>Q. AIに的確な指示を出すための「プロンプト（命令文）」のコツはありますか？</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>難しく考える必要はありません。以下の3点を意識すると精度が劇的に上がります：<br>1. <strong>役割を与える</strong>（例：「あなたは優秀な営業アシスタントです」）<br>2. <strong>背景と目的を伝える</strong>（例：「新商品のパンフレットのたたき台として使います」）<br>3. <strong>出力形式を指定する</strong>（例：「箇条書きで3点にまとめてください」）</p>
+          </div>
+        </div>
+ 
+        <div class="faq-item reveal">
+          <button class="faq-question">
+            <span>Q. 無料で試せる機能はありますか？</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>基本的なGeminiのウェブ版や、一部のGoogle検索・YouTubeと連携した基本機能は、Googleアカウントをお持ちであれば無料でご利用いただけます。より高度なWorkspaceアプリ内での連携（GmailやDocs上での常時共同執筆など）には、Google Workspace用のAIアドオンプランが必要ですが、多くのプランで無料トライアルが用意されています。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- フッター -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-copy">
+        <a href="#" class="footer-logo">Google AI For Work</a>
+        <span>&copy; 2026 Google I/O Updates & Business Optimization Guide.</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#performance">性能比較</a></li>
+        <li><a href="#diagnostics">AI診断</a></li>
+        <li><a href="#features">ツール紹介</a></li>
+        <li><a href="#steps">ロードマップ</a></li>
+        <li><a href="#pricing">料金プラン</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+  </footer>
+ 
+  <script src="app.js"></script>
+</body>
+</html>
