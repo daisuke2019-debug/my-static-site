@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================================================
 // AutoManual AI 用の JavaScript ロジック (グローバルスコープ)
 // ==========================================================================
-const apiKey = ""; // 実行環境で注入されます
+let apiKey = ""; // 実行環境で注入されるか、localStorageから読み込まれます
 
 const SUPPORTED_LANGS = {
     'ja': '日本語',
@@ -307,6 +307,44 @@ document.addEventListener("DOMContentLoaded", () => {
     lucide.createIcons();
     initImageEditor();
     
+    // APIキーのロードと保存UIの処理
+    const savedKey = localStorage.getItem('gemini_api_key');
+    if (savedKey) {
+        apiKey = savedKey;
+        const input = document.getElementById('api-key-input');
+        if (input) input.value = savedKey;
+    }
+
+    const saveBtn = document.getElementById('save-api-key-btn');
+    if (saveBtn) {
+        saveBtn.addEventListener('click', () => {
+            const input = document.getElementById('api-key-input');
+            if (input) {
+                const key = input.value.trim();
+                localStorage.setItem('gemini_api_key', key);
+                apiKey = key;
+                showMessage("設定保存", "APIキーをブラウザに保存しました。");
+            }
+        });
+    }
+
+    const toggleBtn = document.getElementById('toggle-api-key-visibility');
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+            const input = document.getElementById('api-key-input');
+            if (input) {
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    toggleBtn.innerHTML = '<i data-lucide="eye-off" class="w-4 h-4"></i>';
+                } else {
+                    input.type = 'password';
+                    toggleBtn.innerHTML = '<i data-lucide="eye" class="w-4 h-4"></i>';
+                }
+                lucide.createIcons();
+            }
+        });
+    }
+    
     const dropZone = document.getElementById('drop-zone');
     if (dropZone) {
       ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
@@ -351,6 +389,10 @@ function handleVideoUpload(event) {
 }
 
 async function processVideo(file) {
+    if (!apiKey || apiKey.trim() === "") {
+        showMessage("APIキー未設定", "動画の解析にはGemini APIキーが必要です。「Gemini APIキー」入力欄に正しいキーを入力し、保存してから再度お試しください。");
+        return;
+    }
     currentVideoName = file.name.split('.')[0] || "manual";
     manualData['ja'].title = currentVideoName;
     currentVideoFile = file;

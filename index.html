@@ -589,6 +589,26 @@
         <p>操作動画をアップロードするだけで、AIがステップ画像と詳細な説明文付きのマニュアルを瞬時に自動作成します。</p>
       </div>
 
+      <!-- APIキー設定エリア -->
+      <div class="flex justify-center mb-8">
+          <div class="w-full max-w-xl bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 flex flex-col sm:flex-row items-center gap-3">
+              <div class="flex items-center gap-2 text-sm text-slate-300 w-full sm:w-auto flex-shrink-0">
+                  <i data-lucide="key" class="w-4 h-4 text-gradient"></i>
+                  <span>Gemini APIキー:</span>
+              </div>
+              <div class="relative flex-grow w-full">
+                  <input type="password" id="api-key-input" placeholder="AIzaSy... で始まるキーを入力" class="w-full bg-white/5 border border-white/10 rounded-lg py-2 px-3 pr-10 text-sm text-white focus:outline-none focus:border-purple-500 transition-colors">
+                  <button id="toggle-api-key-visibility" class="absolute right-3 top-2.5 text-slate-400 hover:text-white transition-colors" title="表示/非表示の切り替え">
+                      <i data-lucide="eye" class="w-4 h-4"></i>
+                  </button>
+              </div>
+              <button id="save-api-key-btn" class="w-full sm:w-auto bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-1.5 flex-shrink-0 shadow-md shadow-purple-900/20">
+                  <i data-lucide="save" class="w-4 h-4"></i>
+                  保存
+              </button>
+          </div>
+      </div>
+
       <!-- ビュー1: 動画アップロード画面 -->
       <div id="upload-view" class="flex flex-col items-center justify-center min-h-[40vh] mt-8">
           <div class="w-full max-w-2xl bg-white border-2 border-dashed border-blue-300 rounded-2xl p-12 text-center hover:bg-blue-50 transition-colors cursor-pointer relative" id="drop-zone">

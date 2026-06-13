@@ -1379,13 +1379,17 @@ thead th.highlight-col {
 
 /* 入力エリアのダークテーマ化 */
 .automanual-section textarea,
+.automanual-section input[type="password"],
+.automanual-section input[type="text"],
 .automanual-section select {
   background: rgba(255, 255, 255, 0.03) !important;
   border: 1px solid var(--card-border) !important;
   color: var(--text-primary) !important;
 }
 
-.automanual-section textarea:focus {
+.automanual-section textarea:focus,
+.automanual-section input[type="password"]:focus,
+.automanual-section input[type="text"]:focus {
   border-color: var(--google-blue) !important;
   box-shadow: 0 0 10px rgba(66, 133, 244, 0.3) !important;
   outline: none;
