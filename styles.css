@@ -1301,6 +1301,114 @@ thead th.highlight-col {
 }
 
 /* ==========================================================================
+   AutoManual AI セクション用のダークテーマ・ガラスモルフィズムスタイル
+   ========================================================================== */
+.automanual-section {
+  padding: 100px 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--card-border);
+  color: var(--text-primary);
+}
+
+/* テキスト色の強制ダークテーマ化 */
+.automanual-section h2, 
+.automanual-section h3, 
+.automanual-section h4 {
+  color: var(--text-primary) !important;
+  font-family: var(--font-title);
+}
+
+.automanual-section p, 
+.automanual-section span:not(.text-gradient) {
+  color: var(--text-secondary) !important;
+}
+
+/* カードとボックスのガラスモルフィズム化 */
+.automanual-section .bg-white,
+.automanual-section .bg-slate-50,
+.automanual-section #drop-zone,
+.automanual-section .bg-slate-100 {
+  background: var(--card-bg) !important;
+  border-color: var(--card-border) !important;
+  color: var(--text-primary) !important;
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.automanual-section #drop-zone:hover {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: var(--google-blue) !important;
+}
+
+/* ボタンのグラデーション・ネオン化 */
+.automanual-section .bg-blue-600,
+.automanual-section .bg-purple-600 {
+  background: var(--gradient-primary) !important;
+  color: #fff !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4) !important;
+  transition: var(--transition-smooth);
+}
+
+.automanual-section .bg-blue-600:hover,
+.automanual-section .bg-purple-600:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.6) !important;
+}
+
+.automanual-section .bg-slate-100:hover,
+.automanual-section .bg-slate-200:hover,
+.automanual-section .bg-blue-100:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: var(--text-primary) !important;
+}
+
+.automanual-section .bg-blue-50,
+.automanual-section .bg-blue-100 {
+  background: rgba(66, 133, 244, 0.1) !important;
+  color: var(--google-blue) !important;
+  border-color: rgba(66, 133, 244, 0.2) !important;
+}
+
+.automanual-section .text-blue-600,
+.automanual-section .text-blue-700,
+.automanual-section .text-purple-600 {
+  color: var(--google-blue) !important;
+}
+
+/* 入力エリアのダークテーマ化 */
+.automanual-section textarea,
+.automanual-section select {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid var(--card-border) !important;
+  color: var(--text-primary) !important;
+}
+
+.automanual-section textarea:focus {
+  border-color: var(--google-blue) !important;
+  box-shadow: 0 0 10px rgba(66, 133, 244, 0.3) !important;
+  outline: none;
+}
+
+/* モーダル類のダークテーマ化 */
+#message-modal .bg-white,
+#video-export-modal .bg-white,
+#image-editor-modal .bg-white,
+#video-extract-modal .bg-white {
+  background: #0d1322 !important;
+  border: 1px solid var(--card-border) !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* キャンバスエディタなどの背景 */
+#image-editor-modal .bg-slate-900,
+#video-extract-modal .bg-slate-900 {
+  background: rgba(7, 10, 18, 0.95) !important;
+}
+
+/* ==========================================================================
    モバイルレスポンシブ対応 (スマートフォン・タブレット向け)
    ========================================================================== */
 @media (max-width: 768px) {
