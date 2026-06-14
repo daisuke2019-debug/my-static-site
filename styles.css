@@ -12,9 +12,9 @@
   --card-border: rgba(255, 255, 255, 0.08);
   --card-hover-border: rgba(66, 133, 244, 0.4);
   
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
 
   /* Google Brand Colors (Vibrant but harmonious) */
   --google-blue: #4285F4;
@@ -40,14 +40,15 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 17px; /* プロジェクター投影時の視認性を高めるため、基本サイズを拡大 */
 }
 
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-body);
-  line-height: 1.6;
+  line-height: 1.7; /* 行間をやや広げて可読性を向上 */
+  letter-spacing: 0.015em; /* 文字同士のくっつきを防ぐため、文字間をわずかに広げる */
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -1418,7 +1419,7 @@ thead th.highlight-col {
 @media (max-width: 768px) {
   /* 基本設定 */
   html, body {
-    font-size: 15px;
+    font-size: 16px;
     overflow-x: hidden; /* 横スクロールを完全に防止 */
   }
   
