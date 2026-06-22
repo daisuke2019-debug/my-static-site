@@ -2491,13 +2491,11 @@ thead th.highlight-col {
 }
 
 .partner-icon {
-  width: 64px;
-  height: 64px;
-  color: transparent;
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  background-clip: text;
-  filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.4));
+  width: 76px;
+  height: 76px;
+  color: #a855f7;
+  filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.3));
+  transition: var(--transition-smooth);
 }
 
 .partner-card span {
@@ -3457,7 +3455,8 @@ body.projector-mode .partner-card span {
 }
 
 body.projector-mode .partner-icon {
-  filter: drop-shadow(0 0 4px rgba(168, 85, 247, 0.2));
+  color: #7c3aed !important;
+  filter: drop-shadow(0 0 4px rgba(124, 58, 237, 0.15));
 }
 
 body.projector-mode .comparison-summary {
