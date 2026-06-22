@@ -3376,4 +3376,74 @@ body.projector-mode .footer-links a:hover {
   color: #0f172a;
 }
 
+/* 投影モード時のスライダー内テキストの視認性向上 */
+body.projector-mode .slide-badge {
+  background: rgba(168, 85, 247, 0.08);
+  color: #7c3aed;
+  border-color: rgba(168, 85, 247, 0.25);
+}
+
+body.projector-mode .slide-content h3 {
+  background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+body.projector-mode .comp-step-header h4 {
+  color: #0f172a;
+}
+
+body.projector-mode .scenario-q {
+  color: #0f172a;
+}
+
+body.projector-mode .metaphor-item h4 {
+  color: #0f172a;
+}
+
+body.projector-mode .metaphor-role {
+  color: #1e293b;
+}
+
+body.projector-mode .clipper-item-sub strong {
+  color: #0f172a;
+}
+
+body.projector-mode .slider-btn {
+  background: rgba(15, 23, 42, 0.03);
+  border-color: #cbd5e1;
+  color: #475569;
+}
+
+body.projector-mode .slider-btn:hover {
+  color: #ffffff;
+  background: var(--gradient-primary);
+}
+
+body.projector-mode .slider-dots .dot {
+  background: rgba(15, 23, 42, 0.15);
+}
+
+body.projector-mode .slider-dots .dot:hover {
+  background: rgba(15, 23, 42, 0.3);
+}
+
+body.projector-mode .slider-dots .dot.active {
+  background: var(--gradient-primary);
+}
+
+body.projector-mode .comp-responsibility {
+  color: #dc2626; /* 濃い赤 */
+}
+
+body.projector-mode .clip-btn-demo {
+  color: #ffffff;
+}
+
+body.projector-mode .slide-visual {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.03);
+}
+
 
