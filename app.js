@@ -249,6 +249,29 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // --- 投影モード（プロジェクター用）制御 ---
+  const projectorToggleBtn = document.getElementById('btn-projector-toggle');
+  if (projectorToggleBtn) {
+    projectorToggleBtn.addEventListener('click', () => {
+      const isProjectorMode = document.body.classList.toggle('projector-mode');
+      
+      // ボタンのアイコンとテキストをトグル
+      const iconEl = projectorToggleBtn.querySelector('i');
+      const textEl = projectorToggleBtn.querySelector('span');
+      
+      if (isProjectorMode) {
+        iconEl.setAttribute('data-lucide', 'moon');
+        textEl.textContent = '通常モード';
+      } else {
+        iconEl.setAttribute('data-lucide', 'sun');
+        textEl.textContent = '投影モード';
+      }
+      
+      // Lucideアイコンの再描画
+      lucide.createIcons();
+    });
+  }
 });
 
 // ==========================================================================

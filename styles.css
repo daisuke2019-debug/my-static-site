@@ -3024,4 +3024,356 @@ thead th.highlight-col {
   line-height: 1.6;
 }
 
+/* ==========================================================================
+   投影モード (プロジェクター用高コントラスト・ライトテーマ)
+   ========================================================================== */
+.nav-btn-projector {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--card-border);
+  color: var(--text-primary);
+  padding: 0.6rem 1.2rem;
+  border-radius: 99px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: var(--transition-smooth);
+}
+
+.nav-btn-projector:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--google-blue);
+  transform: translateY(-2px);
+}
+
+.nav-btn-projector i {
+  width: 16px;
+  height: 16px;
+  color: var(--google-yellow);
+}
+
+/* 投影モード切り替え時の変数オーバーライド */
+body.projector-mode {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --card-bg: #ffffff;
+  --card-border: #cbd5e1;
+  --card-hover-border: #4285F4;
+  
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+}
+
+body.projector-mode .nav-btn-projector {
+  background: rgba(15, 23, 42, 0.05);
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+body.projector-mode .nav-btn-projector:hover {
+  background: rgba(15, 23, 42, 0.1);
+  border-color: #4285F4;
+}
+
+body.projector-mode .text-gradient {
+  background: linear-gradient(135deg, #1d4ed8 0%, #7c3aed 50%, #db2777 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ヘッダー */
+body.projector-mode header {
+  background: rgba(248, 250, 252, 0.85);
+  border-bottom: 1px solid #cbd5e1;
+}
+
+body.projector-mode .nav-links a {
+  color: #334155;
+}
+
+body.projector-mode .nav-links a:hover {
+  color: #4285F4;
+}
+
+/* ヒーローセクション */
+body.projector-mode .hero::before {
+  background: radial-gradient(circle, rgba(66, 133, 244, 0.08) 0%, transparent 70%);
+}
+
+body.projector-mode .hero::after {
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.05) 0%, transparent 70%);
+}
+
+body.projector-mode .badge {
+  background: rgba(15, 23, 42, 0.03);
+  border-color: #cbd5e1;
+  color: #334155;
+}
+
+/* 散布図グラフ */
+body.projector-mode .chart-container {
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+body.projector-mode .chart-dot .dot-label {
+  color: #1e293b;
+  text-shadow: 0 0 4px #ffffff, 0 0 4px #ffffff;
+  font-weight: 700;
+}
+
+body.projector-mode .chart-tooltip {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+body.projector-mode #tooltip-model {
+  color: #4285F4;
+}
+
+body.projector-mode #tooltip-desc {
+  color: #334155;
+}
+
+/* スライダー */
+body.projector-mode .slide-card {
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+body.projector-mode .comp-step-item {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+body.projector-mode .comp-step-item.highlight {
+  background: rgba(66, 133, 244, 0.05);
+  border-color: rgba(66, 133, 244, 0.3);
+}
+
+body.projector-mode .comp-step-arrow {
+  color: #64748b;
+}
+
+body.projector-mode .scenario-card {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+body.projector-mode .scenario-card.highlight {
+  background: rgba(66, 133, 244, 0.05);
+  border-color: rgba(66, 133, 244, 0.3);
+}
+
+body.projector-mode .metaphor-item {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+body.projector-mode .metaphor-item.highlight {
+  background: rgba(66, 133, 244, 0.05);
+  border-color: rgba(66, 133, 244, 0.3);
+}
+
+body.projector-mode .summary-box {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+body.projector-mode .extra-grid {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+/* クイズ */
+body.projector-mode .quiz-container {
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+body.projector-mode .option-btn {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+body.projector-mode .option-btn:hover {
+  background: rgba(66, 133, 244, 0.1);
+  border-color: #4285F4;
+}
+
+body.projector-mode .option-icon {
+  background: #f1f5f9;
+}
+
+body.projector-mode .result-card {
+  background: rgba(66, 133, 244, 0.08);
+  border-color: rgba(66, 133, 244, 0.3);
+}
+
+body.projector-mode .result-usecase {
+  background: #ffffff;
+  border-color: #34A853;
+}
+
+/* 4大AIツール */
+body.projector-mode .feature-card {
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.03);
+}
+
+body.projector-mode .feature-card:hover {
+  box-shadow: 0 15px 30px rgba(15, 23, 42, 0.08);
+}
+
+body.projector-mode .feature-tag {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+/* Clipper */
+body.projector-mode .mock-browser {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+body.projector-mode .browser-header {
+  background: #f1f5f9;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+body.projector-mode .browser-url {
+  background: #ffffff;
+  color: #475569;
+}
+
+body.projector-mode .mock-x-post {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+body.projector-mode .x-name {
+  color: #0f172a;
+}
+
+body.projector-mode .x-text {
+  color: #334155;
+}
+
+body.projector-mode .mock-note-post {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+body.projector-mode .note-header {
+  background: #f1f5f9;
+  border-bottom: 1px solid #cbd5e1;
+  color: #0f172a;
+}
+
+/* 料金プラン */
+body.projector-mode .pricing-card {
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.03);
+}
+
+body.projector-mode .pricing-card.featured {
+  background: #ffffff;
+  border-color: #4285F4;
+  box-shadow: 0 15px 35px rgba(66, 133, 244, 0.15);
+}
+
+body.projector-mode .price {
+  color: #0f172a;
+}
+
+body.projector-mode .price-dollar,
+body.projector-mode .price-sub {
+  color: #64748b !important;
+}
+
+body.projector-mode .pricing-tab-btn {
+  background: rgba(15, 23, 42, 0.05);
+  border-color: #cbd5e1;
+  color: #475569;
+}
+
+body.projector-mode .pricing-tab-btn.active {
+  background: #4285F4;
+  color: #ffffff;
+  border-color: #4285F4;
+}
+
+/* AutoManual APIキー入力 */
+body.projector-mode #upload-view .bg-white,
+body.projector-mode #loading-view .bg-white,
+body.projector-mode #editor-view .bg-white {
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+body.projector-mode #api-key-input {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+body.projector-mode #api-key-input:focus {
+  border-color: #a855f7;
+}
+
+body.projector-mode #toggle-api-key-visibility {
+  color: #64748b;
+}
+
+body.projector-mode #toggle-api-key-visibility:hover {
+  color: #0f172a;
+}
+
+body.projector-mode #drop-zone {
+  border-color: #93c5fd;
+}
+
+body.projector-mode #drop-zone:hover {
+  background: #eff6ff;
+}
+
+body.projector-mode #drop-zone .text-slate-700 {
+  color: #334155;
+}
+
+body.projector-mode #drop-zone .text-slate-500 {
+  color: #64748b;
+}
+
+body.projector-mode #references-container .bg-slate-50 {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+body.projector-mode #references-container .text-slate-700 {
+  color: #334155;
+}
+
+/* フッター */
+body.projector-mode footer {
+  background: #f1f5f9;
+  border-top: 1px solid #cbd5e1;
+  color: #64748b;
+}
+
+body.projector-mode .footer-logo {
+  color: #334155;
+}
+
+body.projector-mode .footer-links a {
+  color: #64748b;
+}
+
+body.projector-mode .footer-links a:hover {
+  color: #0f172a;
+}
+
 
