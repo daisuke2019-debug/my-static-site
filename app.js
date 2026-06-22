@@ -2115,3 +2115,153 @@ window.updateStepVolume = updateStepVolume;
 window.setDrawMode = setDrawMode;
 window.setDrawColor = setDrawColor;
 
+// --- スライダー制御ロジック ---
+function initSliders() {
+  const sliders = [
+    {
+      id: 'agent',
+      containerId: 'agent-slider-container',
+      wrapperId: 'agent-slider-wrapper',
+      dotsId: 'agent-slider-dots',
+      prevId: 'agent-slider-prev',
+      nextId: 'agent-slider-next',
+      currentIndex: 0,
+      slideCount: 3,
+      autoPlayInterval: 0
+    },
+    {
+      id: 'clipper',
+      containerId: 'clipper-slider-container',
+      wrapperId: 'clipper-slider-wrapper',
+      dotsId: 'clipper-slider-dots',
+      prevId: 'clipper-slider-prev',
+      nextId: 'clipper-slider-next',
+      currentIndex: 0,
+      slideCount: 4,
+      autoPlayInterval: 0
+    }
+  ];
+
+  sliders.forEach(slider => {
+    const container = document.getElementById(slider.containerId);
+    const wrapper = document.getElementById(slider.wrapperId);
+    const dotsContainer = document.getElementById(slider.dotsId);
+    const prevBtn = document.getElementById(slider.prevId);
+    const nextBtn = document.getElementById(slider.nextId);
+
+    if (!container || !wrapper) return;
+
+    const slides = wrapper.querySelectorAll('.slide-card');
+    const dots = dotsContainer ? dotsContainer.querySelectorAll('.dot') : [];
+
+    let timer = null;
+
+    function showSlide(index) {
+      if (index < 0) {
+        slider.currentIndex = slider.slideCount - 1;
+      } else if (index >= slider.slideCount) {
+        slider.currentIndex = 0;
+      } else {
+        slider.currentIndex = index;
+      }
+
+      wrapper.style.transform = `translateX(-${slider.currentIndex * 100}%)`;
+
+      slides.forEach((slide, i) => {
+        if (i === slider.currentIndex) {
+          slide.classList.add('active');
+        } else {
+          slide.classList.remove('active');
+        }
+      });
+
+      dots.forEach((dot, i) => {
+        if (i === slider.currentIndex) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        showSlide(slider.currentIndex - 1);
+        resetAutoPlay();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        showSlide(slider.currentIndex + 1);
+        resetAutoPlay();
+      });
+    }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => {
+        showSlide(i);
+        resetAutoPlay();
+      });
+    });
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    container.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    container.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+
+    function handleSwipe() {
+      const threshold = 50;
+      if (touchStartX - touchEndX > threshold) {
+        showSlide(slider.currentIndex + 1);
+        resetAutoPlay();
+      } else if (touchEndX - touchStartX > threshold) {
+        showSlide(slider.currentIndex - 1);
+        resetAutoPlay();
+      }
+    }
+
+    function startAutoPlay() {
+      if (slider.autoPlayInterval > 0) {
+        timer = setInterval(() => {
+          showSlide(slider.currentIndex + 1);
+        }, slider.autoPlayInterval);
+      }
+    }
+
+    function stopAutoPlay() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    function resetAutoPlay() {
+      if (slider.autoPlayInterval > 0) {
+        stopAutoPlay();
+        startAutoPlay();
+      }
+    }
+
+    if (slider.autoPlayInterval > 0) {
+      container.addEventListener('mouseenter', stopAutoPlay);
+      container.addEventListener('mouseleave', startAutoPlay);
+    }
+
+    showSlide(0);
+    if (slider.autoPlayInterval > 0) {
+      startAutoPlay();
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initSliders);
+
+

@@ -56,6 +56,7 @@
           <li><a href="#steps" id="link-steps">導入3ステップ</a></li>
           <li><a href="#automanual" id="link-automanual">マニュアル作成</a></li>
           <li><a href="#pricing" id="link-pricing">料金プラン</a></li>
+          <li><a href="#security-literacy" id="link-security-literacy">セキュリティ・リテラシー</a></li>
           <li><a href="#faq" id="link-faq">よくある質問</a></li>
           <li><a href="#diagnostics" class="nav-btn" id="btn-nav-start">診断を始める</a></li>
         </ul>
@@ -378,6 +379,208 @@
       </div>
     </div>
   </section>
+
+  <!-- ==========================================================================
+     AIエージェント比較スライドセクション (答えるAIから仕事を進めるAIへ)
+     ========================================================================== -->
+  <section class="agent-comparison-section reveal" id="agent-comparison">
+    <div class="container">
+      <div class="section-header text-center mb-8">
+        <h2>AIエージェントとは？ 3分でわかる比較</h2>
+        <p>AIの進化：「答えるAI」から「仕事を進めるAI」へ</p>
+      </div>
+
+      <!-- スライダーコンテナ -->
+      <div class="slider-container" id="agent-slider-container">
+        <div class="slider-wrapper" id="agent-slider-wrapper">
+          
+          <!-- スライド 1: 進化プロセス -->
+          <div class="slide-card active" data-slide="0">
+            <div class="slide-grid">
+              <div class="slide-content">
+                <span class="slide-badge">STEP 01. 進化プロセス</span>
+                <h3>AIの進化プロセス</h3>
+                <p class="slide-desc">検索エンジンから生成AI、そして自律的に動く「AIエージェント」へ進化しています。</p>
+                <div class="comparison-steps">
+                  <div class="comp-step-item">
+                    <div class="comp-step-header">
+                      <span class="comp-step-num">①</span>
+                      <h4>検索エンジン</h4>
+                      <span class="comp-step-meta">Googleで調べる</span>
+                    </div>
+                    <ul class="comp-step-list">
+                      <li><span class="check-icon">✓</span> 情報を探す / 情報を読む</li>
+                      <li><span class="check-icon">✓</span> 判断する / 作業する</li>
+                      <li class="comp-responsibility font-bold">👉 全部自分でやる</li>
+                    </ul>
+                  </div>
+                  <div class="comp-step-arrow">➔ 進化</div>
+                  <div class="comp-step-item">
+                    <div class="comp-step-header">
+                      <span class="comp-step-num">②</span>
+                      <h4>生成AI</h4>
+                      <span class="comp-step-meta">ChatGPT・Geminiなど</span>
+                    </div>
+                    <ul class="comp-step-list">
+                      <li class="ai-support"><span class="check-icon">✓</span> <strong>AIがサポートすること：</strong> 情報を整理 / 要約する / 文章を作る / アイデア出し</li>
+                      <li class="human-work"><span class="check-icon">✓</span> <strong>人間がやること：</strong> 判断する / 実際に作業する</li>
+                    </ul>
+                  </div>
+                  <div class="comp-step-arrow">➔ 進化</div>
+                  <div class="comp-step-item highlight">
+                    <div class="comp-step-header">
+                      <span class="comp-step-num">③</span>
+                      <h4>AIエージェント</h4>
+                      <span class="comp-step-meta">「これやっておいて」</span>
+                    </div>
+                    <ul class="comp-step-list">
+                      <li class="ai-support"><span class="check-icon">✦</span> <strong>AIが自律的に実行：</strong> 目標を理解する / 情報を集める / 計画を立てる / ツールを使う / 作業を実行する / 結果を確認し改善する</li>
+                      <li class="human-work"><span class="check-icon">✦</span> <strong>人間は目標を伝えるだけ</strong></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-visual">
+                <!-- CSS/SVGイラスト1: 進化プロセスのビジュアル -->
+                <div class="visual-evolution">
+                  <div class="evo-node node-search">
+                    <i data-lucide="search" class="evo-icon"></i>
+                    <span>検索エンジン</span>
+                  </div>
+                  <div class="evo-line"></div>
+                  <div class="evo-node node-genai">
+                    <i data-lucide="message-square" class="evo-icon"></i>
+                    <span>生成AI</span>
+                  </div>
+                  <div class="evo-line"></div>
+                  <div class="evo-node node-agent">
+                    <i data-lucide="cpu" class="evo-icon animate-pulse"></i>
+                    <span>AIエージェント</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- スライド 2: 税理士事務所での例 -->
+          <div class="slide-card" data-slide="1">
+            <div class="slide-grid">
+              <div class="slide-content">
+                <span class="slide-badge">STEP 02. 具体的なシナリオ</span>
+                <h3>税理士事務所での例</h3>
+                <p class="slide-desc">同じ「補助金申請」でも、技術の進化によって業務アプローチが劇的に変わります。</p>
+                <div class="comparison-scenario-cards">
+                  <div class="scenario-card">
+                    <h4>検索エンジンの場合</h4>
+                    <div class="scenario-q">Q. 「持続化補助金の要件は？」</div>
+                    <p class="scenario-a">Googleで調べて、自分で読む・まとめる</p>
+                  </div>
+                  <div class="scenario-card">
+                    <h4>生成AIの場合</h4>
+                    <div class="scenario-q">Q. 「持続化補助金の要件をまとめて」</div>
+                    <p class="scenario-a">AIが要約してくれる ➔ 人間が確認する</p>
+                  </div>
+                  <div class="scenario-card highlight">
+                    <h4>AIエージェントの場合</h4>
+                    <div class="scenario-q">Q. 「A社の補助金申請準備を進めて」</div>
+                    <ul class="scenario-list">
+                      <li><span class="sparkle-icon">✦</span> 会社情報を調べる</li>
+                      <li><span class="sparkle-icon">✦</span> 要件を確認する</li>
+                      <li><span class="sparkle-icon">✦</span> 必要資料をリスト化する</li>
+                      <li><span class="sparkle-icon">✦</span> 担当者へ連絡文を作る</li>
+                      <li><span class="sparkle-icon">✦</span> タスク管理表を更新する</li>
+                    </ul>
+                    <div class="scenario-footer">調査・整理・連絡・タスク化まで<strong>AIが実行！</strong></div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-visual">
+                <!-- CSS/SVGイラスト2: タスクが自律実行されるビジュアル -->
+                <div class="visual-tasks">
+                  <div class="task-agent-avatar">
+                    <i data-lucide="bot" class="avatar-icon"></i>
+                  </div>
+                  <div class="task-nodes-container">
+                    <div class="task-node done"><i data-lucide="search" class="node-i"></i> 会社調査</div>
+                    <div class="task-node done"><i data-lucide="check-square" class="node-i"></i> 要件確認</div>
+                    <div class="task-node active"><i data-lucide="mail" class="node-i"></i> 連絡文作成</div>
+                    <div class="task-node"><i data-lucide="list-todo" class="node-i"></i> タスク更新</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- スライド 3: わかりやすい例え＆まとめ -->
+          <div class="slide-card" data-slide="2">
+            <div class="slide-grid">
+              <div class="slide-content">
+                <span class="slide-badge">STEP 03. 役割の例え＆まとめ</span>
+                <h3>一番わかりやすい例え</h3>
+                <p class="slide-desc">AIエージェントを人物や馴染みのあるツールに例えると、その特性がはっきりと分かります。</p>
+                <div class="comparison-metaphor">
+                  <div class="metaphor-item">
+                    <h4>新入社員</h4>
+                    <div class="metaphor-role">「何をやればいいですか？」</div>
+                    <p class="metaphor-desc">指示がないと動けない / 毎回聞いてくる / 指示待ちタイプ</p>
+                  </div>
+                  <div class="metaphor-item">
+                    <h4>生成AI</h4>
+                    <div class="metaphor-tag">優秀なアシスタント</div>
+                    <div class="metaphor-role">「聞かれたら答える」</div>
+                    <p class="metaphor-desc">質問すればすぐ答える / 定確にアドバイスしてくれる / サポートは得意！でも、行動はしない</p>
+                  </div>
+                  <div class="metaphor-item highlight">
+                    <h4>AIエージェント</h4>
+                    <div class="metaphor-tag">優秀な社員</div>
+                    <div class="metaphor-role">「目標を伝えたら、自分で考えて進める」</div>
+                    <p class="metaphor-desc">自分で考えて動く / 必要な情報を集める / 計画を立てて実行する / 進捗も報告してくれる</p>
+                  </div>
+                </div>
+                
+                <div class="comparison-extra mt-6">
+                  <h4 class="mb-2 font-bold">よく比較されるもの</h4>
+                  <div class="extra-grid">
+                    <div><strong>GAS:</strong> ルール通りに動く「AになったらBする」</div>
+                    <div><strong>生成AI:</strong> 考える「この文章を要約して」</div>
+                    <div class="highlight-text"><strong>AIエージェント:</strong> 考えて動く「この案件を進めて」</div>
+                  </div>
+                </div>
+
+                <div class="comparison-summary mt-6">
+                  <div class="summary-box">
+                    <div class="summary-evo">今までのAI <strong>「答えるAI」</strong> ➔ これからのAI <strong>「仕事を進めるAI」</strong></div>
+                    <p>AIエージェントは、目標達成のために<strong>自律的に考え、行動するパートナー！</strong></p>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-visual">
+                <!-- CSS/SVGイラスト3: まとめビジュアル -->
+                <div class="visual-partner">
+                  <div class="partner-card">
+                    <i data-lucide="handshake" class="partner-icon"></i>
+                    <span>自律的に考え行動するパートナー</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- スライドナビゲーション -->
+        <button class="slider-btn prev" id="agent-slider-prev" aria-label="前へ"><i data-lucide="chevron-left"></i></button>
+        <button class="slider-btn next" id="agent-slider-next" aria-label="次へ"><i data-lucide="chevron-right"></i></button>
+
+        <!-- インジケータードット -->
+        <div class="slider-dots" id="agent-slider-dots">
+          <span class="dot active" data-go="0"></span>
+          <span class="dot" data-go="1"></span>
+          <span class="dot" data-go="2"></span>
+        </div>
+      </div>
+    </div>
+  </section>
  
   <!-- AI業務診断セクション -->
   <section class="diagnostics" id="diagnostics">
@@ -542,7 +745,185 @@
       </div>
     </div>
   </section>
- 
+
+  <!-- ==========================================================================
+     NotebookLM Web Clipperスライドセクション
+     ========================================================================== -->
+  <section class="clipper-section reveal" id="notebooklm-clipper">
+    <div class="container">
+      <div class="section-header text-center mb-8">
+        <h2>『Web Clipper for NotebookLM』であらゆるコンテンツを保存！</h2>
+        <p>ブラウザ拡張機能を使って、YouTubeやSNS、クラウド上のデータを1クリックでNotebookLMへインポートします。</p>
+      </div>
+
+      <div class="slider-container" id="clipper-slider-container">
+        <div class="slider-wrapper" id="clipper-slider-wrapper">
+
+          <!-- スライド 1: YouTube -->
+          <div class="slide-card active" data-slide="0">
+            <div class="slide-grid">
+              <div class="slide-content">
+                <span class="slide-badge">FEATURE 01</span>
+                <h3>YouTubeをまるごと1クリックで</h3>
+                <p class="slide-desc font-bold text-gradient">ボタンクリックでノートに追加できる！</p>
+                <div class="clipper-feature-details">
+                  <div class="clipper-item-sub">
+                    <span class="num-bullet">✓</span>
+                    <div>
+                      <strong>個別動画</strong>
+                      <p>視聴中の動画をそのまま1クリックでNotebookLMのソースに追加できます。</p>
+                    </div>
+                  </div>
+                  <div class="clipper-item-sub">
+                    <span class="num-bullet">✓</span>
+                    <div>
+                      <strong>チャンネルごと</strong>
+                      <p>お気に入りのクリエイターや解説チャンネルの動画群を丸ごと保存できます。</p>
+                    </div>
+                  </div>
+                  <div class="clipper-item-sub">
+                    <span class="num-bullet">✓</span>
+                    <div>
+                      <strong>プレイリスト毎</strong>
+                      <p>整理されたプレイリスト単位で、関連する動画をすべて一括で追加可能です。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="slide-visual">
+                <!-- YouTube保存ビジュアル -->
+                <div class="visual-clipper-yt">
+                  <div class="mock-browser">
+                    <div class="browser-header">
+                      <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+                      <div class="browser-url">youtube.com/watch...</div>
+                    </div>
+                    <div class="browser-body">
+                      <div class="yt-player">
+                        <i data-lucide="play-circle" class="yt-play-i"></i>
+                      </div>
+                      <button class="clip-btn-demo">
+                        <i data-lucide="paperclip" class="w-4 h-4"></i> NotebookLMに追加
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- スライド 2: X (旧Twitter) -->
+          <div class="slide-card" data-slide="1">
+            <div class="slide-grid">
+              <div class="slide-content">
+                <span class="slide-badge">FEATURE 02</span>
+                <h3>Xのポスト・X記事をノートに</h3>
+                <p class="slide-desc font-bold text-gradient">Xのスレッドに加えてX記事も保存できる！</p>
+                <div class="clipper-feature-details">
+                  <p class="mb-4">X（旧Twitter）で流れてくる有益な連投スレッドや、長文のX記事（旧アーティクル）を、フォーマットを維持したまま綺麗にNotebookLMに保存します。</p>
+                  <p>後で読み返したいノウハウや業界のトレンド分析を、あなたのプライベートナレッジベースに即座に蓄積できます。</p>
+                </div>
+              </div>
+              <div class="slide-visual">
+                <!-- X保存ビジュアル -->
+                <div class="visual-clipper-x">
+                  <div class="mock-x-post">
+                    <div class="x-user">
+                      <div class="avatar-placeholder"></div>
+                      <div>
+                        <span class="x-name">AIインフルエンサー</span>
+                        <span class="x-handle">@ai_insider</span>
+                      </div>
+                    </div>
+                    <p class="x-text">最新のAIエージェントのトレンドについて解説します。まず1つ目は自律型のタスク遂行能力...</p>
+                    <div class="x-actions">
+                      <i data-lucide="message-circle" class="w-4 h-4"></i>
+                      <i data-lucide="repeat" class="w-4 h-4"></i>
+                      <i data-lucide="heart" class="w-4 h-4"></i>
+                      <button class="clip-btn-demo mini">
+                        <i data-lucide="paperclip" class="w-3.5 h-3.5"></i> 追加
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- スライド 3: Googleドライブ -->
+          <div class="slide-card" data-slide="2">
+            <div class="slide-grid">
+              <div class="slide-content">
+                <span class="slide-badge">FEATURE 03</span>
+                <h3>Googleドライブの自動同期</h3>
+                <p class="slide-desc font-bold text-gradient">自動で定期的に同期！！手動でも更新可能！「らくちん〜♪」</p>
+                <div class="clipper-feature-details">
+                  <p class="mb-4">Googleドライブ内の特定のフォルダやドキュメントをNotebookLMに紐づけるだけで、内容が更新された際に自動的かつ定期的にノートブックへ同期します。</p>
+                  <p>手動で更新ボタンを押す必要すらなく、常に最新の社内ドキュメントや資料に基づいたAI対話が可能です。</p>
+                </div>
+              </div>
+              <div class="slide-visual">
+                <!-- ドライブ同期ビジュアル -->
+                <div class="visual-clipper-drive">
+                  <div class="sync-animation">
+                    <div class="icon-box-drive"><i data-lucide="hard-drive" class="drive-i"></i></div>
+                    <div class="sync-arrows">
+                      <i data-lucide="refresh-cw" class="sync-arrow-i"></i>
+                    </div>
+                    <div class="icon-box-notebook"><i data-lucide="book-open" class="notebook-i"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- スライド 4: noteメンバーシップ -->
+          <div class="slide-card" data-slide="3">
+            <div class="slide-grid">
+              <div class="slide-content">
+                <span class="slide-badge">FEATURE 04</span>
+                <h3>noteメンバーシップ記事も！</h3>
+                <p class="slide-desc font-bold text-gradient">noteの有料メンバーシップの記事も追加できる！「すげ〜」</p>
+                <div class="clipper-feature-details">
+                  <p class="mb-4">通常はアクセス制限のかかっている、noteの有料メンバーシップ限定記事や有料コンテンツであっても、Web Clipper拡張機能を使えば、あなたが購読している内容を安全にNotebookLMにインポートできます。</p>
+                  <p>クローズドなコミュニティで得た貴重な知見を整理し、AIと壁打ちをしながらさらに深いアイデアへと昇華させることができます。</p>
+                </div>
+              </div>
+              <div class="slide-visual">
+                <!-- note保存ビジュアル -->
+                <div class="visual-clipper-note">
+                  <div class="mock-note-post">
+                    <div class="note-header">note</div>
+                    <div class="note-membership-badge"><i data-lucide="lock" class="w-3.5 h-3.5"></i> メンバーシップ限定</div>
+                    <h4 class="note-title">AI時代の情報発信術</h4>
+                    <div class="note-line-placeholder"></div>
+                    <div class="note-line-placeholder"></div>
+                    <button class="clip-btn-demo">
+                      <i data-lucide="paperclip" class="w-4 h-4"></i> NotebookLMに追加
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- スライドナビゲーション -->
+        <button class="slider-btn prev" id="clipper-slider-prev" aria-label="前へ"><i data-lucide="chevron-left"></i></button>
+        <button class="slider-btn next" id="clipper-slider-next" aria-label="次へ"><i data-lucide="chevron-right"></i></button>
+
+        <!-- インジケータードット -->
+        <div class="slider-dots" id="clipper-slider-dots">
+          <span class="dot active" data-go="0"></span>
+          <span class="dot" data-go="1"></span>
+          <span class="dot" data-go="2"></span>
+          <span class="dot" data-go="3"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
   <!-- ロードマップ・ステップアップ -->
   <section class="steps" id="steps">
     <div class="container">
@@ -813,6 +1194,7 @@
         <div class="pricing-tabs">
           <button class="pricing-tab-btn active" data-target="gemini-pricing" id="tab-gemini">Gemini プラン</button>
           <button class="pricing-tab-btn" data-target="notebook-pricing" id="tab-notebook">NotebookLM プラン</button>
+          <button class="pricing-tab-btn" data-target="workspace-pricing" id="tab-workspace">Google Workspace プラン</button>
         </div>
       </div>
  
@@ -914,9 +1296,185 @@
           </div>
         </div>
       </div>
+
+      <!-- Google Workspace 料金表 -->
+      <div class="pricing-content reveal" id="workspace-pricing">
+        <div class="pricing-grid">
+          <!-- Business Standard -->
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h3>Business Standard</h3>
+              <p>ビジネスの基盤となる基本コラボレーション環境</p>
+              <div class="price">¥1,360 <span>/ 月・ユーザー</span></div>
+              <p class="price-sub text-muted">※AI機能は含まれません</p>
+            </div>
+            <ul class="price-features">
+              <li>ビジネス用カスタムメールアドレス (Gmail)</li>
+              <li>1ユーザーあたり <strong>2TB</strong> のセキュアな保存容量</li>
+              <li>最大150人が参加可能なMeet会議 (録画機能付き)</li>
+              <li>ドキュメント、スプレッドシート等のリアルタイム共同編集</li>
+              <li>組織内ファイル管理用の共有ドライブ</li>
+            </ul>
+            <a href="https://workspace.google.com/" target="_blank" class="btn btn-secondary pricing-btn">無料で開始</a>
+          </div>
+ 
+          <!-- Gemini Business -->
+          <div class="pricing-card featured">
+            <div class="featured-badge">標準的なAI導入に</div>
+            <div class="pricing-card-header">
+              <h3>Gemini Business</h3>
+              <p>日常業務の生産性を高めるWorkspace専用AIアドオン</p>
+              <div class="price">+¥3,000 <span>/ 月・ユーザー</span></div>
+              <p class="price-sub text-muted">※基本プランに上乗せ ($20/ユーザー/月)</p>
+            </div>
+            <ul class="price-features">
+              <li>Gmail、ドキュメント、スライド、スプレッドシート内での <strong>Gemini共同執筆・編集</strong></li>
+              <li>Google Meet内でのAI背景生成や自動議事録作成アシスト</li>
+              <li><strong>エンタープライズグレードのプライバシー</strong> (入力データをモデル学習に使用しません)</li>
+              <li>Web版 of 標準的なGemini (gemini.google.com) へのアクセス</li>
+            </ul>
+            <a href="https://workspace.google.com/solutions/ai/" target="_blank" class="btn btn-primary pricing-btn">無料試用を開始</a>
+          </div>
+ 
+          <!-- Gemini Enterprise -->
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h3>Gemini Enterprise</h3>
+              <p>制限なしのフルパワーAIと高度なセキュリティ</p>
+              <div class="price">+¥4,500 <span>/ 月・ユーザー</span></div>
+              <p class="price-sub text-muted">※基本プランに上乗せ ($30/ユーザー/月)</p>
+            </div>
+            <ul class="price-features">
+              <li>Gemini Businessアドオンの全機能</li>
+              <li>使用上限なしの <strong>Geminiへのフルアクセス</strong></li>
+              <li>Google MeetにおけるAI搭載の <strong>リアルタイム字幕・音声翻訳</strong></li>
+              <li>AIを活用した高度なデータ保護とセキュリティポリシー管理</li>
+              <li>最優先の技術サポート</li>
+            </ul>
+            <a href="https://workspace.google.com/solutions/ai/" target="_blank" class="btn btn-secondary pricing-btn">お問い合わせ</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
  
+  <!-- ==========================================================================
+     セキュリティ＆AI情報リテラシー セクション
+     ========================================================================== -->
+  <section class="security-literacy reveal" id="security-literacy">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>安全に使うためのセキュリティ＆リテラシー</h2>
+        <p>GoogleのAIツールをビジネスで安全に活用するためのポリシーと、適切な使い方（リテラシー）を分かりやすく解説します。</p>
+      </div>
+
+      <!-- セキュリティポリシー比較カード -->
+      <div class="policy-container reveal">
+        <h3 class="subsection-title"><i data-lucide="shield-check" class="sub-icon"></i> 各ツールのセキュリティ＆プライバシーポリシー</h3>
+        <p class="subsection-desc">GoogleのAIサービスは、プランやツールによってデータの取り扱い（AI学習への利用有無）が異なります。機密情報を守るために正しく理解しましょう。</p>
+
+        <div class="policy-cards">
+          <!-- Google Workspace (Gemini Business/Enterprise) -->
+          <div class="policy-card workspace">
+            <div class="policy-card-header">
+              <span class="policy-icon"><i data-lucide="building-2"></i></span>
+              <div class="policy-header-title">
+                <h4>Google Workspace (Gemini)</h4>
+                <span class="policy-badge safe">学習利用なし（安全）</span>
+              </div>
+            </div>
+            <div class="policy-card-body">
+              <ul>
+                <li><span class="bullet">✓</span> 入力したプロンプトや社内データは<strong>AIモデルの公開学習に一切使用されません</strong>。</li>
+                <li><span class="bullet">✓</span> データは組織のセキュリティ境界内に保護され、外部に漏洩することはありません。</li>
+                <li><span class="bullet">✓</span> 企業の社外秘データや顧客情報も、既存のWorkspaceセキュリティ水準で安全に処理されます。</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- NotebookLM -->
+          <div class="policy-card notebook">
+            <div class="policy-card-header">
+              <span class="policy-icon"><i data-lucide="book-open"></i></span>
+              <div class="policy-header-title">
+                <h4>NotebookLM</h4>
+                <span class="policy-badge safe">学習利用なし（安全）</span>
+              </div>
+            </div>
+            <div class="policy-card-body">
+              <ul>
+                <li><span class="bullet">✓</span> アップロードしたソース資料（PDFやGoogleドキュメント等）は<strong>モデル学習に利用されません</strong>。</li>
+                <li><span class="bullet">✓</span> あなたが作成したノートやAIとのチャット履歴も完全に非公開で保護されます。</li>
+                <li><span class="bullet">✓</span> 社内ドキュメントやプライベートな勉強ノートを安心してアップロードできます。</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Gemini 個人向け無料版 (gemini.google.com) -->
+          <div class="policy-card free-gemini">
+            <div class="policy-card-header">
+              <span class="policy-icon"><i data-lucide="user"></i></span>
+              <div class="policy-header-title">
+                <h4>Gemini 個人向け無料版</h4>
+                <span class="policy-badge warning">条件により学習利用あり</span>
+              </div>
+            </div>
+            <div class="policy-card-body">
+              <ul>
+                <li><span class="bullet">⚠</span> 標準設定では、サービス改善やモデル向上のために<strong>人間のレビュアーが会話内容を確認・利用する場合があります</strong>。</li>
+                <li><span class="bullet">⚠</span> <strong>社外秘のデータ、個人情報、未公開のソースコード等は絶対に入力しないでください</strong>。</li>
+                <li><span class="bullet">✓</span> 設定から「Gemini Apps アクティビティ」をオフにすることで、一時的に学習を防ぐことができます。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI情報リテラシー（適切な使い方） -->
+      <div class="literacy-container reveal">
+        <h3 class="subsection-title"><i data-lucide="help-circle" class="sub-icon"></i> ビジネスでAIを使うための情報リテラシー</h3>
+        
+        <div class="literacy-grid">
+          <!-- リテラシー 1: ハルシネーションの対策 -->
+          <div class="literacy-card">
+            <div class="lit-icon"><i data-lucide="alert-triangle"></i></div>
+            <div class="lit-content">
+              <h5>1. ファクトチェック（ハルシネーション対策）</h5>
+              <p>AIはもっともらしい「嘘（ハルシネーション）」を出力することがあります。重要な数値、専門的な規約、法的根拠などは、必ず人間が一次情報を確認する習慣をつけましょう。※NotebookLMはソース引用元が表示されるため確認がスムーズです。</p>
+            </div>
+          </div>
+
+          <!-- リテラシー 2: 個人情報・機密情報の保護 -->
+          <div class="literacy-card">
+            <div class="lit-icon"><i data-lucide="eye-off"></i></div>
+            <div class="lit-content">
+              <h5>2. 入力データの管理（情報漏洩対策）</h5>
+              <p>無料版AIを利用する際は、「誰に見られても問題ない情報」のみを入力してください。顧客の個人情報、社内の機密文書、パスワードやアクセスキーなどは、誤って入力しないようチーム全体でリテラシーを高める必要があります。</p>
+            </div>
+          </div>
+
+          <!-- リテラシー 3: 著作権・知的財産の配慮 -->
+          <div class="literacy-card">
+            <div class="lit-icon"><i data-lucide="copyright"></i></div>
+            <div class="lit-content">
+              <h5>3. 出力物の権利と著作権の配慮</h5>
+              <p>AIが生成した文章や画像を商用利用・公開する場合、他者の著作権を侵害していないか、利用規約やガイドラインに準拠しているか確認しましょう。また、AIで作成したコンテンツであることを明記することが求められるケースもあります。</p>
+            </div>
+          </div>
+
+          <!-- リテラシー 4: 人間とAIの適切な役割分担 -->
+          <div class="literacy-card">
+            <div class="lit-icon"><i data-lucide="users"></i></div>
+            <div class="lit-content">
+              <h5>4. 意思決定と責任は「人間」にある</h5>
+              <p>AIは「たたき台作成」や「アイデア発案」を支援する強力なアシスタントですが、最終的な内容の正確性や、ビジネスにおける意思決定の責任はすべて人間に帰属します。AIのアドバイスを鵜呑みにせず、主体性を持って判断しましょう。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FAQセクション -->
   <section class="faq" id="faq">
     <div class="container">
@@ -972,6 +1530,7 @@
         <li><a href="#features">ツール紹介</a></li>
         <li><a href="#steps">ロードマップ</a></li>
         <li><a href="#pricing">料金プラン</a></li>
+        <li><a href="#security-literacy">セキュリティ・リテラシー</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
     </div>
