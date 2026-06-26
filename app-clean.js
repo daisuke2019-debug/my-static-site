@@ -304,4 +304,29 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // --- プロンプトコピー制御 ---
+  const copyButtons = document.querySelectorAll('.btn-copy');
+  copyButtons.forEach(btn => {
+    const originalHTML = btn.innerHTML;
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const textarea = document.getElementById(targetId);
+      if (textarea) {
+        navigator.clipboard.writeText(textarea.value).then(() => {
+          btn.classList.add('copied');
+          btn.innerHTML = '<i data-lucide="check"></i> <span>コピーしました！</span>';
+          if (window.lucide) window.lucide.createIcons();
+
+          setTimeout(() => {
+            btn.classList.remove('copied');
+            btn.innerHTML = originalHTML;
+            if (window.lucide) window.lucide.createIcons();
+          }, 2000);
+        }).catch(err => {
+          console.error('Could not copy text: ', err);
+        });
+      }
+    });
+  });
 });

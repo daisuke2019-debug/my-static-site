@@ -4015,3 +4015,154 @@ body.projector-mode .step-num-badge {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* ==========================================================================
+   NotebookLM 使い方ガイド：実践プロンプト集スタイル
+   ========================================================================== */
+.prompt-templates-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .prompt-templates-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.prompt-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 1.8rem;
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.prompt-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--card-hover-border);
+  box-shadow: var(--shadow-md);
+}
+
+.prompt-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.prompt-card-header h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.prompt-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.p-blue { background: rgba(66, 133, 244, 0.15); color: var(--google-blue); }
+.p-purple { background: rgba(168, 85, 247, 0.15); color: #c084fc; }
+.p-green { background: rgba(52, 168, 83, 0.15); color: var(--google-green); }
+.p-orange { background: rgba(245, 158, 11, 0.15); color: #f59e0b; }
+
+.prompt-box-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.prompt-textarea {
+  width: 100%;
+  height: 90px;
+  background: transparent;
+  border: none;
+  resize: none;
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  outline: none;
+  margin-bottom: 0.8rem;
+  padding: 0;
+}
+
+.btn-copy {
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--gradient-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  box-shadow: 0 2px 8px rgba(168, 85, 247, 0.2);
+}
+
+.btn-copy:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.btn-copy.copied {
+  background: var(--google-green) !important;
+  box-shadow: 0 2px 8px rgba(52, 168, 83, 0.2) !important;
+}
+
+/* ==========================================================================
+   プロジェクターモード（ライトモード）対応：実践プロンプト集
+   ========================================================================== */
+body.projector-mode .prompt-card {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+body.projector-mode .prompt-card:hover {
+  border-color: #a855f7;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+body.projector-mode .prompt-card-header h4 {
+  color: #0f172a;
+}
+
+body.projector-mode .prompt-box-container {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+body.projector-mode .prompt-textarea {
+  color: #334155;
+}
+
+body.projector-mode .p-blue { background: rgba(66, 133, 244, 0.1); color: #1a73e8; }
+body.projector-mode .p-purple { background: rgba(168, 85, 247, 0.1); color: #9333ea; }
+body.projector-mode .p-green { background: rgba(52, 168, 83, 0.1); color: #137333; }
+body.projector-mode .p-orange { background: rgba(245, 158, 11, 0.1); color: #b06000; }
+
+
