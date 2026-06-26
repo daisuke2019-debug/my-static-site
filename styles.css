@@ -4165,4 +4165,35 @@ body.projector-mode .p-purple { background: rgba(168, 85, 247, 0.1); color: #933
 body.projector-mode .p-green { background: rgba(52, 168, 83, 0.1); color: #137333; }
 body.projector-mode .p-orange { background: rgba(245, 158, 11, 0.1); color: #b06000; }
 
+/* 特例の全幅カード */
+.prompt-card.featured-card {
+  grid-column: 1 / span 2;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.05) 0%, rgba(236, 72, 153, 0.05) 100%);
+}
+
+@media (max-width: 768px) {
+  .prompt-card.featured-card {
+    grid-column: auto;
+  }
+}
+
+.p-game {
+  background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
+  color: #f472b6;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+/* プロジェクターモード（ライトモード）での追加設定 */
+body.projector-mode .prompt-card.featured-card {
+  background: linear-gradient(135deg, #fdf4ff 0%, #fef2f2 100%);
+  border-color: #e9d5ff;
+}
+
+body.projector-mode .p-game {
+  background: rgba(236, 72, 153, 0.1);
+  color: #db2777;
+  border-color: rgba(236, 72, 153, 0.2);
+}
+
+
 
