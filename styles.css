@@ -2,8 +2,8 @@
 
 /* デザインシステムとカスタムプロパティ */
 :root {
-  --font-title: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-title: 'Outfit', "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, "MS PGothic", sans-serif;
+  --font-body: 'Inter', "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, "MS PGothic", sans-serif;
 
   /* カラーパレット */
   --bg-primary: #0b0f19;
@@ -13,8 +13,8 @@
   --card-hover-border: rgba(66, 133, 244, 0.4);
   
   --text-primary: #ffffff;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
+  --text-secondary: #e2e8f0; /* コントラスト向上のため明るく調整 */
+  --text-muted: #a2b0c3; /* コントラスト向上のため明るく調整 */
 
   /* Google Brand Colors (Vibrant but harmonious) */
   --google-blue: #4285F4;
@@ -47,10 +47,11 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-body);
-  line-height: 1.7; /* 行間をやや広げて可読性を向上 */
-  letter-spacing: 0.015em; /* 文字同士のくっつきを防ぐため、文字間をわずかに広げる */
+  line-height: 1.75; /* 行間をさらに広げて可読性を向上 */
+  letter-spacing: 0.025em; /* 文字同士の詰まりを防ぐため、文字間を広げる */
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* コンテナとレイアウト */
@@ -3926,8 +3927,29 @@ body.projector-mode .sp-chat-input {
 /* ==========================================================================
    プロジェクターモード（ライトモード）対応追加
    ========================================================================== */
+body.projector-mode {
+  color: #000000 !important;
+}
+
+body.projector-mode p,
+body.projector-mode li,
+body.projector-mode span:not(.status-badge),
+body.projector-mode textarea {
+  color: #0f172a !important;
+  font-weight: 500; /* 投影時の文字のかすれを防止 */
+}
+
+body.projector-mode h1,
+body.projector-mode h2,
+body.projector-mode h3,
+body.projector-mode h4,
+body.projector-mode strong {
+  color: #000000 !important;
+  font-weight: 700;
+}
+
 body.projector-mode .guide-section-divider span {
-  color: #4285F4;
+  color: #4285F4 !important;
 }
 body.projector-mode .guide-card-alt {
   background: #f8fafc;
@@ -3974,9 +3996,15 @@ body.projector-mode .setting-toggle.active::after {
   display: flex;
   align-items: flex-start;
   gap: 0.8rem;
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.95rem;
+  line-height: 1.7;
   color: var(--text-secondary);
+  font-weight: 450;
+}
+
+.guide-step-details li strong {
+  color: var(--text-primary);
+  font-weight: 700;
 }
 
 .guide-step-details li a {
@@ -4099,9 +4127,9 @@ body.projector-mode .step-num-badge {
   border: none;
   resize: none;
   font-family: inherit;
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.7;
   outline: none;
   margin-bottom: 0.8rem;
   padding: 0;
