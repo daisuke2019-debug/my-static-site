@@ -13,17 +13,8 @@
   <meta property="og:title" content="Google AI For Work 2026 - 業務を効率化するAIガイド">
   <meta property="og:description" content="Google I/O 2026 of 最新AIツールを使った業務効率化ロードマップ。">
   <meta property="og:type" content="website">
-  
-  <!-- AutoManual用外部スクリプト -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      corePlugins: {
-        preflight: false,
-      }
-    }
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js" crossorigin="anonymous"></script>
+  <!-- Lucideアイコン -->
+  <script src='https://unpkg.com/lucide@latest'></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   
   <!-- Google Fonts: Noto Sans JP -->
@@ -53,8 +44,8 @@
           <li><a href="#performance" id="link-performance">性能比較</a></li>
           <li><a href="#diagnostics" id="link-diagnostics">AI診断</a></li>
           <li><a href="#features" id="link-features">最新ツール紹介</a></li>
+          <li><a href='#notebooklm-guide' id='link-notebooklm-guide'>NotebookLMガイド</a></li>
           <li><a href="#steps" id="link-steps">導入3ステップ</a></li>
-          <li><a href="#automanual" id="link-automanual">マニュアル作成</a></li>
           <li><a href="#pricing" id="link-pricing">料金プラン</a></li>
           <li><a href="#security-literacy" id="link-security-literacy">セキュリティ・リテラシー</a></li>
           <li><a href="#faq" id="link-faq">よくある質問</a></li>
@@ -748,183 +739,360 @@
   </section>
 
   <!-- ==========================================================================
-     NotebookLM Web Clipperスライドセクション
+     NotebookLM 使い方ガイド セクション (スマホ版・PC版)
      ========================================================================== -->
-  <section class="clipper-section reveal" id="notebooklm-clipper">
+  <section class="notebooklm-guide-section reveal" id="notebooklm-guide">
     <div class="container">
       <div class="section-header text-center mb-8">
-        <h2>『Web Clipper for NotebookLM』であらゆるコンテンツを保存！</h2>
-        <p>ブラウザ拡張機能を使って、YouTubeやSNS、クラウド上のデータを1クリックでNotebookLMへインポートします。</p>
+        <h2>NotebookLM 使い方ガイド</h2>
+        <p>PCとスマートフォン、それぞれの画面に最適化された操作方法で、情報収集と整理を効率化しましょう。</p>
+        
+        <!-- 切り替えタブ -->
+        <div class="guide-tabs">
+          <button class="guide-tab-btn active" data-target="guide-pc" id="tab-guide-pc">
+            <i data-lucide="monitor"></i> PC版の使い方
+          </button>
+          <button class="guide-tab-btn" data-target="guide-sp" id="tab-guide-sp">
+            <i data-lucide="smartphone"></i> スマホ版の使い方
+          </button>
+        </div>
       </div>
 
-      <div class="slider-container" id="clipper-slider-container">
-        <div class="slider-wrapper" id="clipper-slider-wrapper">
-
-          <!-- スライド 1: YouTube -->
-          <div class="slide-card active" data-slide="0">
-            <div class="slide-grid">
-              <div class="slide-content">
-                <span class="slide-badge">FEATURE 01</span>
-                <h3>YouTubeをまるごと1クリックで</h3>
-                <p class="slide-desc font-bold text-gradient">ボタンクリックでノートに追加できる！</p>
-                <div class="clipper-feature-details">
-                  <div class="clipper-item-sub">
-                    <span class="num-bullet">✓</span>
-                    <div>
-                      <strong>個別動画</strong>
-                      <p>視聴中の動画をそのまま1クリックでNotebookLMのソースに追加できます。</p>
-                    </div>
+      <!-- PC版コンテンツ -->
+      <div class="guide-content active" id="guide-pc">
+        <div class="guide-grid">
+          <!-- ソース追加 -->
+          <div class="guide-card">
+            <div class="guide-card-icon"><i data-lucide="plus-square"></i></div>
+            <h3>1. ソースの追加</h3>
+            <p class="guide-card-subtitle">あらゆる情報をインポート</p>
+            <ul class="guide-card-list">
+              <li><span class="bullet">✦</span> 画面左の<strong>「ソースを追加 (＋)」</strong>をクリック。</li>
+              <li><span class="bullet">✦</span> Googleドライブ、PDF、WebサイトURL、テキスト貼り付けなどから選択。</li>
+              <li><span class="bullet">✦</span> 1ノートブックあたり最大50個、1ソース最大50万語まで対応。</li>
+            </ul>
+            <div class="guide-visual-mini pc-sources">
+              <div class="mock-ui-container">
+                <div class="mock-ui-header">
+                  <div class="mock-ui-dot red"></div>
+                  <div class="mock-ui-dot yellow"></div>
+                  <div class="mock-ui-dot green"></div>
+                </div>
+                <div class="mock-ui-body">
+                  <div class="sources-list">
+                    <div class="sources-btn"><i data-lucide="plus" style="width: 8px; height: 8px;"></i> 追加</div>
+                    <div class="source-item-mini"></div>
+                    <div class="source-item-mini"></div>
                   </div>
-                  <div class="clipper-item-sub">
-                    <span class="num-bullet">✓</span>
-                    <div>
-                      <strong>チャンネルごと</strong>
-                      <p>お気に入りのクリエイターや解説チャンネルの動画群を丸ごと保存できます。</p>
-                    </div>
-                  </div>
-                  <div class="clipper-item-sub">
-                    <span class="num-bullet">✓</span>
-                    <div>
-                      <strong>プレイリスト毎</strong>
-                      <p>整理されたプレイリスト単位で、関連する動画をすべて一括で追加可能です。</p>
+                  <div class="sources-main">
+                    <div class="upload-box-mini">
+                      <i data-lucide="upload-cloud" class="upload-icon-mini" style="width: 14px; height: 14px;"></i>
+                      <div class="upload-text-mini" style="font-size: 6px;">PDF/ドライブ</div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="slide-visual">
-                <!-- YouTube保存ビジュアル -->
-                <div class="visual-clipper-yt">
-                  <div class="mock-browser">
-                    <div class="browser-header">
-                      <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
-                      <div class="browser-url">youtube.com/watch...</div>
+            </div>
+          </div>
+          <!-- チャット -->
+          <div class="guide-card">
+            <div class="guide-card-icon"><i data-lucide="message-square"></i></div>
+            <h3>2. チャットの使い方</h3>
+            <p class="guide-card-subtitle">根拠（ソース）を示すAIと対話</p>
+            <ul class="guide-card-list">
+              <li><span class="bullet">✦</span> 画面下のチャットバーに質問を入力して送信。</li>
+              <li><span class="bullet">✦</span> AIが<strong>アップロードした資料だけを基に</strong>高精度な回答を生成。</li>
+              <li><span class="bullet">✦</span> 回答内の<strong>ソース引用番号</strong>をクリックすると、元の記述箇所を表示。</li>
+            </ul>
+            <div class="guide-visual-mini pc-chat">
+              <div class="mock-ui-container">
+                <div class="mock-ui-header">
+                  <div class="mock-ui-dot red"></div>
+                  <div class="mock-ui-dot yellow"></div>
+                  <div class="mock-ui-dot green"></div>
+                </div>
+                <div class="mock-ui-body">
+                  <div class="chat-area-mini">
+                    <div class="chat-messages-mini">
+                      <div class="chat-bubble-mini user">資料を要約して</div>
+                      <div class="chat-bubble-mini ai">この資料は...<span class="citation-num">1</span></div>
                     </div>
-                    <div class="browser-body">
-                      <div class="yt-player">
-                        <i data-lucide="play-circle" class="yt-play-i"></i>
+                    <div class="chat-input-mini">
+                      <div class="chat-input-placeholder">質問を入力...</div>
+                      <div class="chat-send-btn-mini"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- スタジオ -->
+          <div class="guide-card">
+            <div class="guide-card-icon"><i data-lucide="sliders"></i></div>
+            <h3>3. スタジオの使い方</h3>
+            <p class="guide-card-subtitle">資料をまとめ・ポッドキャスト化</p>
+            <ul class="guide-card-list">
+              <li><span class="bullet">✦</span> 画面右側の<strong>「Notebookガイド」</strong>を開く。</li>
+              <li><span class="bullet">✦</span> <strong>「音声概要 (Audio Overview)」</strong>で、資料を対話する英語/日本語の音声を生成。</li>
+              <li><span class="bullet">✦</span> FAQ、学習ガイド、タイムライン、メモ作成などのドキュメントをワンクリック自動生成。</li>
+            </ul>
+            <div class="guide-visual-mini pc-studio">
+              <div class="mock-ui-container">
+                <div class="mock-ui-header">
+                  <div class="mock-ui-dot red"></div>
+                  <div class="mock-ui-dot yellow"></div>
+                  <div class="mock-ui-dot green"></div>
+                </div>
+                <div class="mock-ui-body">
+                  <div class="studio-area-mini">
+                    <div class="studio-main-mini">
+                      <div class="studio-card-mini">
+                        <div class="studio-card-title">学習ガイド</div>
+                        <div class="studio-card-line"></div>
+                        <div class="studio-card-line" style="width: 70%;"></div>
                       </div>
-                      <button class="clip-btn-demo">
-                        <i data-lucide="paperclip" class="w-4 h-4"></i> NotebookLMに追加
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- スライド 2: X (旧Twitter) -->
-          <div class="slide-card" data-slide="1">
-            <div class="slide-grid">
-              <div class="slide-content">
-                <span class="slide-badge">FEATURE 02</span>
-                <h3>Xのポスト・X記事をノートに</h3>
-                <p class="slide-desc font-bold text-gradient">Xのスレッドに加えてX記事も保存できる！</p>
-                <div class="clipper-feature-details">
-                  <p class="mb-4">X（旧Twitter）で流れてくる有益な連投スレッドや、長文のX記事（旧アーティクル）を、フォーマットを維持したまま綺麗にNotebookLMに保存します。</p>
-                  <p>後で読み返したいノウハウや業界のトレンド分析を、あなたのプライベートナレッジベースに即座に蓄積できます。</p>
-                </div>
-              </div>
-              <div class="slide-visual">
-                <!-- X保存ビジュアル -->
-                <div class="visual-clipper-x">
-                  <div class="mock-x-post">
-                    <div class="x-user">
-                      <div class="avatar-placeholder"></div>
-                      <div>
-                        <span class="x-name">AIインフルエンサー</span>
-                        <span class="x-handle">@ai_insider</span>
+                      <div class="studio-card-mini">
+                        <div class="studio-card-title">FAQ</div>
+                        <div class="studio-card-line"></div>
                       </div>
                     </div>
-                    <p class="x-text">最新のAIエージェントのトレンドについて解説します。まず1つ目は自律型のタスク遂行能力...</p>
-                    <div class="x-actions">
-                      <i data-lucide="message-circle" class="w-4 h-4"></i>
-                      <i data-lucide="repeat" class="w-4 h-4"></i>
-                      <i data-lucide="heart" class="w-4 h-4"></i>
-                      <button class="clip-btn-demo mini">
-                        <i data-lucide="paperclip" class="w-3.5 h-3.5"></i> 追加
-                      </button>
+                    <div class="studio-sidebar-mini">
+                      <div class="studio-btn-audio">
+                        <i data-lucide="headphones" style="width: 10px; height: 10px;"></i>
+                        <span style="font-size: 5px; font-weight: bold; margin-top: 2px;">音声概要</span>
+                        <div class="audio-waves" style="margin-top: 2px;">
+                          <span class="audio-wave-bar"></span>
+                          <span class="audio-wave-bar"></span>
+                          <span class="audio-wave-bar"></span>
+                          <span class="audio-wave-bar"></span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- スライド 3: Googleドライブ -->
-          <div class="slide-card" data-slide="2">
-            <div class="slide-grid">
-              <div class="slide-content">
-                <span class="slide-badge">FEATURE 03</span>
-                <h3>Googleドライブの自動同期</h3>
-                <p class="slide-desc font-bold text-gradient">自動で定期的に同期！！手動でも更新可能！「らくちん〜♪」</p>
-                <div class="clipper-feature-details">
-                  <p class="mb-4">Googleドライブ内の特定のフォルダやドキュメントをNotebookLMに紐づけるだけで、内容が更新された際に自動的かつ定期的にノートブックへ同期します。</p>
-                  <p>手動で更新ボタンを押す必要すらなく、常に最新の社内ドキュメントや資料に基づいたAI対話が可能です。</p>
-                </div>
-              </div>
-              <div class="slide-visual">
-                <!-- ドライブ同期ビジュアル -->
-                <div class="visual-clipper-drive">
-                  <div class="sync-animation">
-                    <div class="icon-box-drive"><i data-lucide="hard-drive" class="drive-i"></i></div>
-                    <div class="sync-arrows">
-                      <i data-lucide="refresh-cw" class="sync-arrow-i"></i>
-                    </div>
-                    <div class="icon-box-notebook"><i data-lucide="book-open" class="notebook-i"></i></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- スライド 4: noteメンバーシップ -->
-          <div class="slide-card" data-slide="3">
-            <div class="slide-grid">
-              <div class="slide-content">
-                <span class="slide-badge">FEATURE 04</span>
-                <h3>noteメンバーシップ記事も！</h3>
-                <p class="slide-desc font-bold text-gradient">noteの有料メンバーシップの記事も追加できる！「すげ〜」</p>
-                <div class="clipper-feature-details">
-                  <p class="mb-4">通常はアクセス制限のかかっている、noteの有料メンバーシップ限定記事や有料コンテンツであっても、Web Clipper拡張機能を使えば、あなたが購読している内容を安全にNotebookLMにインポートできます。</p>
-                  <p>クローズドなコミュニティで得た貴重な知見を整理し、AIと壁打ちをしながらさらに深いアイデアへと昇華させることができます。</p>
-                </div>
-              </div>
-              <div class="slide-visual">
-                <!-- note保存ビジュアル -->
-                <div class="visual-clipper-note">
-                  <div class="mock-note-post">
-                    <div class="note-header">note</div>
-                    <div class="note-membership-badge"><i data-lucide="lock" class="w-3.5 h-3.5"></i> メンバーシップ限定</div>
-                    <h4 class="note-title">AI時代の情報発信術</h4>
-                    <div class="note-line-placeholder"></div>
-                    <div class="note-line-placeholder"></div>
-                    <button class="clip-btn-demo">
-                      <i data-lucide="paperclip" class="w-4 h-4"></i> NotebookLMに追加
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
 
-        <!-- スライドナビゲーション -->
-        <button class="slider-btn prev" id="clipper-slider-prev" aria-label="前へ"><i data-lucide="chevron-left"></i></button>
-        <button class="slider-btn next" id="clipper-slider-next" aria-label="次へ"><i data-lucide="chevron-right"></i></button>
+        <!-- 応用テクニック見出し -->
+        <div class="guide-section-divider">
+          <span>応用テクニック & 最新機能</span>
+        </div>
 
-        <!-- インジケータードット -->
-        <div class="slider-dots" id="clipper-slider-dots">
-          <span class="dot active" data-go="0"></span>
-          <span class="dot" data-go="1"></span>
-          <span class="dot" data-go="2"></span>
-          <span class="dot" data-go="3"></span>
+        <!-- 応用グリッド -->
+        <div class="guide-grid-2">
+          <!-- Fast & Deep Research -->
+          <div class="guide-card-alt">
+            <div class="guide-card-icon alt-blue"><i data-lucide="search"></i></div>
+            <h3>Fast & Deep Research の使い分け</h3>
+            <p class="guide-card-subtitle">最新のAIリサーチ機能を網羅</p>
+            <ul class="guide-card-list">
+              <li><span class="bullet">✦</span> <strong>Fast Research</strong>: Webの最新情報や複数ソースからクイックに要約を抽出します。</li>
+              <li><span class="bullet">✦</span> <strong>Deep Research</strong>: 関連Webページや論文をAIが自動巡回し、多角的なレポートを生成します。</li>
+              <li><span class="bullet">✦</span> プロンプト例: <code>「[テーマ]について競合他社の動向をDeep Researchしてレポート化して」</code></li>
+            </ul>
+            <!-- プロンプト入力画面のモックアップUI -->
+            <div class="guide-visual-mini pc-research">
+              <div class="mock-ui-container">
+                <div class="mock-ui-header">
+                  <div class="mock-ui-dot red"></div>
+                  <div class="mock-ui-dot yellow"></div>
+                  <div class="mock-ui-dot green"></div>
+                </div>
+                <div class="mock-ui-body py-1 flex-col justify-between">
+                  <div class="research-status-bar">
+                    <i data-lucide="compass" class="spin-icon"></i>
+                    <span>Deep Research 実行中... (12のWebソースを巡回)</span>
+                  </div>
+                  <div class="research-progress-mini">
+                    <div class="progress-bar-fill" style="width: 65%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gamification -->
+          <div class="guide-card-alt">
+            <div class="guide-card-icon alt-purple"><i data-lucide="gamepad-2"></i></div>
+            <h3>クエスト感覚で学ぶ「ゲーム化」</h3>
+            <p class="guide-card-subtitle">ストーリー性のある知識獲得</p>
+            <ul class="guide-card-list">
+              <li><span class="bullet">✦</span> <strong>クエスト（ソース追加）</strong>: PDFやURLを「学習クエスト」としてNotebookに登録。</li>
+              <li><span class="bullet">✦</span> <strong>バトル（AIチャット）</strong>: AIからの突っ込んだ質問やクイズに答えて理解度をテスト。</li>
+              <li><span class="bullet">✦</span> <strong>攻略本（FAQ/学習ガイド）</strong>: 自動生成されたドキュメントを知識の装備として蓄積。</li>
+            </ul>
+            <!-- ゲーム風モックアップUI -->
+            <div class="guide-visual-mini pc-game">
+              <div class="mock-ui-container">
+                <div class="mock-ui-body flex-col justify-center items-center gap-1 text-center">
+                  <div class="game-badge">KNOWLEDGE LEVEL UP!</div>
+                  <div class="game-char-row">
+                    <i data-lucide="shield" style="width: 14px; height: 14px; color: #eab308;"></i>
+                    <span class="font-bold" style="font-size: 8px;">理解度: LV.42 / 100</span>
+                  </div>
+                  <span style="font-size: 6px; color: var(--text-muted);">「音声概要」クエストをクリア！</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- スマホ版コンテンツ -->
+      <div class="guide-content" id="guide-sp">
+        <div class="guide-grid">
+          <!-- ソース追加 -->
+          <div class="guide-card">
+            <div class="guide-card-icon"><i data-lucide="plus-circle"></i></div>
+            <h3>1. ソースの追加</h3>
+            <p class="guide-card-subtitle">移動中でも手軽にインプット</p>
+            <ul class="guide-card-list">
+              <li><span class="bullet">✦</span> 上部またはメニューの<strong>「＋」</strong>アイコンをタップ。</li>
+              <li><span class="bullet">✦</span> スマートフォン内のファイル（PDFやTXT）や、クリップボード of URLを指定。</li>
+              <li><span class="bullet">✦</span> 外出先で見つけた有益な記事やPDF資料を、その場ですぐにインポート可能。</li>
+            </ul>
+            <div class="guide-visual-mini sp-sources">
+              <div class="mock-sp-container">
+                <div class="mock-sp-notch"></div>
+                <div class="mock-sp-body">
+                  <div class="sp-sources-body">
+                    <div class="sp-plus-btn-pulse">
+                      <i data-lucide="plus" style="width: 14px; height: 14px;"></i>
+                    </div>
+                    <span style="font-size: 7px; color: var(--text-muted); font-weight: bold; margin-top: 4px;">ソースを追加</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- チャット -->
+          <div class="guide-card">
+            <div class="guide-card-icon"><i data-lucide="message-circle"></i></div>
+            <h3>2. チャットの使い方</h3>
+            <p class="guide-card-subtitle">タップ操作で手軽に質問・確認</p>
+            <ul class="guide-card-list">
+              <li><span class="bullet">✦</span> 下部に固定されたチャット入力エリアをタップして質問を入力。</li>
+              <li><span class="bullet">✦</span> モバイル向けに最適化された読みやすいスレッド表示。</li>
+              <li><span class="bullet">✦</span> ソースの参照部分もタップするだけで、ポップアップで手軽に引用元を確認できます。</li>
+            </ul>
+            <div class="guide-visual-mini sp-chat">
+              <div class="mock-sp-container">
+                <div class="mock-sp-notch"></div>
+                <div class="mock-sp-body">
+                  <div class="sp-chat-body">
+                    <div class="sp-chat-messages">
+                      <div class="sp-bubble user">まとめは？</div>
+                      <div class="sp-bubble ai">要点は3点...</div>
+                    </div>
+                    <div class="sp-chat-input">
+                      <span>質問を入力...</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- スタジオ -->
+          <div class="guide-card">
+            <div class="guide-card-icon"><i data-lucide="headphones"></i></div>
+            <h3>3. スタジオの使い方</h3>
+            <p class="guide-card-subtitle">耳と目で学ぶ隙間時間学習</p>
+            <ul class="guide-card-list">
+              <li><span class="bullet">✦</span> 画面右上のメニューまたは<strong>「ガイド」</strong>アイコンをタップ。</li>
+              <li><span class="bullet">✦</span> 生成済みの<strong>「音声概要（Audio Overview）」を再生</strong>して、歩きながらポッドキャスト形式で聴取。</li>
+              <li><span class="bullet">✦</span> 自動生成されたFAQや学習ガイドなどをスマホでスピーディに確認・閲覧。</li>
+            </ul>
+            <div class="guide-visual-mini sp-studio">
+              <div class="mock-sp-container">
+                <div class="mock-sp-notch"></div>
+                <div class="mock-sp-body">
+                  <div class="sp-audio-body">
+                    <div class="sp-audio-disc">
+                      <i data-lucide="music" style="width: 14px; height: 14px;"></i>
+                    </div>
+                    <span style="font-size: 7px; color: var(--text-primary); font-weight: bold; margin-top: 4px;">音声の再生中</span>
+                    <div class="sp-audio-controls" style="margin-top: 4px;">
+                      <div class="sp-audio-play">
+                        <i data-lucide="pause" style="width: 8px; height: 8px; fill: black; stroke: none;"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 応用テクニック見出し -->
+        <div class="guide-section-divider">
+          <span>モバイル特化・応用テクニック</span>
+        </div>
+
+        <!-- 応用グリッド -->
+        <div class="guide-grid-2">
+          <!-- ドライブ自動スキャン -->
+          <div class="guide-card-alt">
+            <div class="guide-card-icon alt-green"><i data-lucide="scan"></i></div>
+            <h3>Googleドライブ自動スキャン連携</h3>
+            <p class="guide-card-subtitle">紙の資料をその場で情報資産化</p>
+            <ul class="guide-card-list">
+              <li><span class="bullet">✦</span> <strong>カメラでスキャン</strong>: スマホのGoogleドライブアプリを起動し「スキャン」を選択。</li>
+              <li><span class="bullet">✦</span> <strong>ワンタップPDF化</strong>: 名刺、手書きメモ、本、領収書などを自動トリミングしてPDF化。</li>
+              <li><span class="bullet">✦</span> <strong>即時インポート</strong>: 保存したPDFをNotebookLMへロードし、あなたのプライベート辞書に追加。</li>
+            </ul>
+            <!-- ドライブスキャンモックアップ -->
+            <div class="guide-visual-mini sp-scan">
+              <div class="mock-sp-container">
+                <div class="mock-sp-notch"></div>
+                <div class="mock-sp-body flex-col justify-center items-center gap-2">
+                  <div class="scan-area-box">
+                    <i data-lucide="focus" class="scan-focus-i"></i>
+                    <span style="font-size: 5px; color: #22c55e;">領収書を検出中</span>
+                  </div>
+                  <span style="font-size: 6px; color: var(--text-muted);">ドライブへ自動PDF保存</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 音声解説カスタマイズ -->
+          <div class="guide-card-alt">
+            <div class="guide-card-icon alt-orange"><i data-lucide="settings-2"></i></div>
+            <h3>音声解説（Audio Overview）の生成手順</h3>
+            <p class="guide-card-subtitle">ポッドキャストを自分好みに生成</p>
+            <ul class="guide-card-list">
+              <li><span class="bullet">✦</span> <strong>生成の開始</strong>: 「Notebookガイド」から「音声の会話」の生成ボタンをタップ。</li>
+              <li><span class="bullet">✦</span> <strong>詳細カスタマイズ</strong>: 「カスタマイズ」から、特定のトピックの強調や話者の言語を選択可能。</li>
+              <li><span class="bullet">✦</span> <strong>日・英対応</strong>: 日本語資料から流暢な英語/日本語対話のポッドキャストを自由に作成できます。</li>
+            </ul>
+            <!-- カスタマイズモックアップ -->
+            <div class="guide-visual-mini sp-customize">
+              <div class="mock-sp-container">
+                <div class="mock-sp-notch"></div>
+                <div class="mock-sp-body flex-col justify-between p-2">
+                  <span class="font-bold" style="font-size: 6px; color: var(--text-primary);">カスタマイズ設定</span>
+                  <div class="flex-col gap-1 w-full">
+                    <div class="setting-row-mini">
+                      <span style="font-size: 5px;">特定のテーマにフォーカス</span>
+                      <div class="setting-toggle active"></div>
+                    </div>
+                    <div class="setting-row-mini">
+                      <span style="font-size: 5px;">話者のトーンをカジュアルに</span>
+                      <div class="setting-toggle"></div>
+                    </div>
+                  </div>
+                  <div class="setting-btn-mini">音声解説を再生成</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  
+
   <!-- ロードマップ・ステップアップ -->
   <section class="steps" id="steps">
     <div class="container">
@@ -964,227 +1132,6 @@
   <!-- ==========================================================================
      AutoManual AI セクション (動画からマニュアルを自動作成)
      ========================================================================== -->
-  <section class="automanual-section reveal" id="automanual">
-    <div class="container">
-      <div class="section-header text-center mb-8">
-        <h2>AutoManual <span class="text-gradient">AI</span></h2>
-        <p>操作動画をアップロードするだけで、AIがステップ画像と詳細な説明文付きのマニュアルを瞬時に自動作成します。</p>
-      </div>
-
-      <!-- APIキー設定エリア -->
-      <div class="flex justify-center mb-8">
-          <div class="w-full max-w-xl bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 flex flex-col sm:flex-row items-center gap-3">
-              <div class="flex items-center gap-2 text-sm text-slate-300 w-full sm:w-auto flex-shrink-0">
-                  <i data-lucide="key" class="w-4 h-4 text-gradient"></i>
-                  <span>Gemini APIキー:</span>
-              </div>
-              <div class="relative flex-grow w-full">
-                  <input type="password" id="api-key-input" placeholder="AIzaSy... で始まるキーを入力" class="w-full bg-white/5 border border-white/10 rounded-lg py-2 px-3 pr-10 text-sm text-white focus:outline-none focus:border-purple-500 transition-colors">
-                  <button id="toggle-api-key-visibility" class="absolute right-3 top-2.5 text-slate-400 hover:text-white transition-colors" title="表示/非表示の切り替え">
-                      <i data-lucide="eye" class="w-4 h-4"></i>
-                  </button>
-              </div>
-              <button id="save-api-key-btn" class="w-full sm:w-auto bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-1.5 flex-shrink-0 shadow-md shadow-purple-900/20">
-                  <i data-lucide="save" class="w-4 h-4"></i>
-                  保存
-              </button>
-          </div>
-      </div>
-
-      <!-- ビュー1: 動画アップロード画面 -->
-      <div id="upload-view" class="flex flex-col items-center justify-center min-h-[40vh] mt-8">
-          <div class="w-full max-w-2xl bg-white border-2 border-dashed border-blue-300 rounded-2xl p-12 text-center hover:bg-blue-50 transition-colors cursor-pointer relative" id="drop-zone">
-              <input type="file" id="video-upload" accept="video/mp4,video/x-m4v,video/*" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" onchange="handleVideoUpload(event)">
-              <div class="flex flex-col items-center pointer-events-none">
-                  <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4">
-                      <i data-lucide="video" class="w-8 h-8"></i>
-                  </div>
-                  <p class="text-lg font-semibold text-slate-700 mb-2">クリックまたはドラッグ＆ドロップで動画を選択</p>
-                  <p class="text-sm text-slate-500">MP4, WebM (最大推奨 5分程度)</p>
-              </div>
-          </div>
-      </div>
-
-      <!-- ビュー2: 解析中ローディング画面 -->
-      <div id="loading-view" class="hidden flex-col items-center justify-center min-h-[40vh] mt-8">
-          <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col items-center max-w-md w-full">
-              <i data-lucide="loader-2" class="w-16 h-16 text-blue-600 animate-spin mb-6"></i>
-              <h3 class="text-xl font-bold text-slate-800 mb-2" id="loading-title">動画を解析中...</h3>
-              <p class="text-slate-500 text-center mb-6" id="loading-desc">動画から主要なフレームを抽出しています。</p>
-              
-              <!-- プログレスバー -->
-              <div class="w-full bg-slate-100 rounded-full h-2.5 mb-2">
-                  <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full transition-all duration-300" style="width: 0%"></div>
-              </div>
-              <p class="text-xs text-slate-400 font-medium w-full text-right" id="progress-text">0%</p>
-          </div>
-      </div>
-
-      <!-- ビュー3: エディタ画面 -->
-      <div id="editor-view" class="hidden mt-8">
-          <div class="mb-6 flex flex-col gap-4">
-              <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                  <div>
-                      <h2 class="text-2xl font-bold text-slate-800 mb-1">マニュアル編集</h2>
-                      <p class="text-slate-500 text-sm">自動生成された内容を確認し、必要に応じて修正・翻訳してください。</p>
-                  </div>
-                  <div class="flex bg-white rounded-full p-1 shadow-sm border border-slate-200">
-                      <button onclick="exportHTML()" class="flex items-center gap-2 px-5 py-2 hover:bg-slate-50 text-slate-700 rounded-full text-sm font-medium transition-colors">
-                          <i data-lucide="code" class="w-4 h-4"></i> HTML出力
-                      </button>
-                      <button onclick="openVideoExportModal()" class="flex items-center gap-2 px-5 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-full text-sm font-medium transition-colors shadow-sm">
-                          <i data-lucide="monitor-play" class="w-4 h-4"></i> 動画出力 (TTS)
-                      </button>
-                  </div>
-              </div>
-              <div class="flex justify-end items-center gap-3">
-                  <div class="flex items-center gap-2 bg-white p-1.5 rounded-lg border border-slate-200 shadow-sm">
-                      <i data-lucide="languages" class="w-4 h-4 text-slate-500 ml-1"></i>
-                      <select id="lang-selector" onchange="switchLanguage(this.value)" class="bg-transparent border-none text-sm font-medium text-slate-700 outline-none cursor-pointer pr-4 focus:ring-0">
-                          <!-- JSで動的に追加されます -->
-                      </select>
-                  </div>
-                  <button id="translate-btn" onclick="translateAllSteps()" class="hidden flex items-center gap-2 px-3 py-1.5 bg-blue-100 hover:bg-blue-200 text-blue-700 rounded-md text-sm font-medium transition-colors">
-                      <i data-lucide="sparkles" class="w-4 h-4"></i> この言語に翻訳
-                  </button>
-              </div>
-          </div>
-
-          <!-- 参考資料セクション -->
-          <div class="mb-8 bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-              <div class="flex justify-between items-center mb-3">
-                  <h3 class="font-bold text-slate-800 text-sm flex items-center gap-2">
-                      <i data-lucide="paperclip" class="w-4 h-4 text-blue-600"></i> 参考資料の添付（全体用）
-                  </h3>
-                  <label class="cursor-pointer text-xs text-blue-600 hover:text-blue-700 font-medium flex items-center gap-1 bg-blue-50 hover:bg-blue-100 px-3 py-1.5 rounded-lg transition-colors">
-                      <i data-lucide="plus" class="w-3.5 h-3.5"></i> ファイルを追加
-                      <input type="file" multiple class="hidden" onchange="handleReferenceUpload(event)">
-                  </label>
-              </div>
-              <div id="references-container" class="space-y-2 mt-2">
-                  <p class="text-xs text-slate-400 italic">参考資料は添付されていません。必要に応じてPDFやExcelファイルなどを追加してください。</p>
-              </div>
-          </div>
-
-          <!-- ステップリストコンテナ -->
-          <div id="steps-container" class="space-y-6">
-              <!-- ステップDOMがここにJSで挿入されます -->
-          </div>
-
-          <!-- ステップ追加ボタン -->
-          <div class="mt-8 text-center">
-              <button onclick="addStep()" class="inline-flex items-center gap-2 px-6 py-3 bg-white border border-slate-300 hover:border-blue-400 hover:text-blue-600 text-slate-600 rounded-xl font-medium shadow-sm transition-all">
-                  <i data-lucide="plus-circle" class="w-5 h-5"></i> 新しいステップを追加
-              </button>
-          </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 各種モーダル群 (移植) -->
-  <!-- メッセージモーダル -->
-  <div id="message-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center opacity-0 transition-opacity">
-      <div class="bg-white rounded-xl shadow-xl max-w-sm w-full p-6 transform scale-95 transition-transform" id="message-modal-content">
-          <h3 class="text-lg font-bold text-slate-800 mb-2" id="message-title">通知</h3>
-          <p class="text-slate-600 mb-6" id="message-text">メッセージ内容</p>
-          <div class="text-right">
-              <button onclick="closeMessage()" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium">閉じる</button>
-          </div>
-      </div>
-  </div>
-
-  <!-- 多言語動画エクスポートモーダル -->
-  <div id="video-export-modal" class="fixed inset-0 bg-black bg-opacity-50 z-[80] hidden flex flex-col items-center justify-center p-4 opacity-0 transition-opacity">
-      <div class="bg-white rounded-xl shadow-xl w-full max-w-md overflow-hidden transform scale-95 transition-transform" id="video-export-modal-content">
-          <div class="p-5 border-b border-slate-200 flex justify-between items-center bg-slate-50">
-              <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
-                  <i data-lucide="monitor-play" class="w-5 h-5 text-purple-600"></i> 動画出力 (TTS)
-              </h3>
-              <button onclick="closeVideoExportModal()" class="text-slate-400 hover:text-slate-600">
-                  <i data-lucide="x" class="w-5 h-5"></i>
-              </button>
-          </div>
-          <div class="p-6">
-              <p class="text-sm text-slate-600 mb-4">出力する言語を選択してください。複数選択すると一括生成後にZIPファイルとしてダウンロードされます。</p>
-              <div id="export-langs-container" class="space-y-2 mb-6 max-h-48 overflow-y-auto">
-                  <!-- チェックボックスリストが JS で挿入される -->
-              </div>
-              <div class="flex justify-end gap-3">
-                  <button onclick="closeVideoExportModal()" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-sm font-medium transition-colors">キャンセル</button>
-                  <button onclick="executeVideoExportMulti()" class="px-5 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg text-sm font-medium transition-colors shadow-sm flex items-center gap-2">
-                      <i data-lucide="download" class="w-4 h-4"></i> 出力を開始
-                  </button>
-              </div>
-          </div>
-      </div>
-  </div>
-
-  <!-- 画像エディタモーダル -->
-  <div id="image-editor-modal" class="fixed inset-0 bg-slate-900 bg-opacity-90 z-[60] hidden flex flex-col items-center justify-center p-4">
-      <div class="bg-white rounded-t-xl w-full max-w-5xl p-3 flex items-center justify-between shadow-md">
-          <div class="flex items-center gap-4">
-              <button onclick="setDrawMode('pen')" id="tool-pen" class="p-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition-colors" title="手書き">
-                  <i data-lucide="pen-tool" class="w-5 h-5"></i>
-              </button>
-              <button onclick="setDrawMode('rect')" id="tool-rect" class="p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors" title="矩形">
-                  <i data-lucide="square" class="w-5 h-5"></i>
-              </button>
-              <div class="h-6 w-px bg-slate-300 mx-1"></div>
-              <div class="flex items-center gap-2">
-                  <input type="color" id="color-picker" value="#ff0000" class="w-8 h-8 rounded cursor-pointer border-0 p-0" onchange="setDrawColor(this.value)">
-                  <div class="flex gap-1">
-                      <button onclick="setDrawColor('#ff0000')" class="w-6 h-6 rounded-full bg-[#ff0000] border-2 border-transparent hover:border-slate-400 shadow-sm"></button>
-                      <button onclick="setDrawColor('#3b82f6')" class="w-6 h-6 rounded-full bg-[#3b82f6] border-2 border-transparent hover:border-slate-400 shadow-sm"></button>
-                      <button onclick="setDrawColor('#22c55e')" class="w-6 h-6 rounded-full bg-[#22c55e] border-2 border-transparent hover:border-slate-400 shadow-sm"></button>
-                      <button onclick="setDrawColor('#eab308')" class="w-6 h-6 rounded-full bg-[#eab308] border-2 border-transparent hover:border-slate-400 shadow-sm"></button>
-                  </div>
-              </div>
-          </div>
-          <div class="flex items-center gap-3">
-              <button onclick="clearCanvasDrawings()" class="px-3 py-1.5 text-sm text-slate-600 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors">全消去</button>
-              <button onclick="closeImageEditor()" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg text-sm font-medium transition-colors">キャンセル</button>
-              <button onclick="saveEditedImage()" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm font-medium transition-colors">保存</button>
-          </div>
-      </div>
-      <div class="bg-slate-800 w-full max-w-5xl flex-grow rounded-b-xl overflow-hidden relative flex items-center justify-center p-4">
-          <div class="relative shadow-2xl" id="canvas-container" style="max-width: 100%; max-height: 100%;">
-              <canvas id="base-canvas" class="block" style="max-width: 100%; max-height: 75vh;"></canvas>
-              <canvas id="drawing-canvas" class="absolute top-0 left-0 w-full h-full cursor-crosshair touch-none"></canvas>
-          </div>
-      </div>
-  </div>
-
-  <!-- 動画切り出しモーダル -->
-  <div id="video-extract-modal" class="fixed inset-0 bg-slate-900 bg-opacity-90 z-[70] hidden flex flex-col items-center justify-center p-4">
-      <div class="bg-white rounded-xl w-full max-w-4xl overflow-hidden shadow-2xl flex flex-col">
-          <div class="p-4 border-b border-slate-200 flex justify-between items-center bg-slate-50">
-              <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
-                  <i data-lucide="scissors" class="w-5 h-5 text-blue-600"></i> 動画からメディアを切り出し
-              </h3>
-              <button onclick="closeVideoExtractModal()" class="text-slate-400 hover:text-slate-600">
-                  <i data-lucide="x" class="w-6 h-6"></i>
-              </button>
-          </div>
-          <div class="p-4 bg-black flex justify-center items-center relative h-[60vh]">
-              <video id="extract-video-player" controls crossorigin="anonymous" class="max-h-full w-auto max-w-full"></video>
-              <div id="recording-indicator" class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1.5 rounded-full text-xs font-bold animate-pulse hidden flex items-center gap-2">
-                  <div class="w-2 h-2 bg-white rounded-full"></div> 録画中...
-              </div>
-          </div>
-          <div class="p-4 bg-slate-50 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
-              <p class="text-sm text-slate-600 hidden md:block">再生・シークして、抽出したい場面でアクションを選んでください。</p>
-              <div class="flex flex-wrap gap-2 w-full md:w-auto justify-end">
-                  <button onclick="captureFrameFromVideo()" class="flex items-center justify-center gap-2 px-4 py-2 bg-blue-100 hover:bg-blue-200 text-blue-700 rounded-lg text-sm font-medium transition-colors shadow-sm flex-grow md:flex-grow-0">
-                      <i data-lucide="camera" class="w-4 h-4"></i> 静止画として抽出
-                  </button>
-                  <button id="record-btn" onclick="toggleRecording()" class="flex items-center justify-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg text-sm font-medium transition-colors shadow-sm flex-grow md:flex-grow-0">
-                      <i data-lucide="video" class="w-4 h-4"></i> ここから録画（最大10秒）
-                  </button>
-              </div>
-          </div>
-      </div>
-  </div>
-
   <!-- 料金プランセクション -->
   <section class="pricing" id="pricing">
     <div class="container">
@@ -1537,6 +1484,6 @@
     </div>
   </footer>
  
-  <script src="app.js"></script>
+  <script src='app-clean.js'></script>
 </body>
 </html>
