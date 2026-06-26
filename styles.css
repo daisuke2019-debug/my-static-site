@@ -4195,5 +4195,35 @@ body.projector-mode .p-game {
   border-color: rgba(236, 72, 153, 0.2);
 }
 
+/* ==========================================================================
+   実際のNotebookLM画像表示用のスタイル
+   ========================================================================== */
+.guide-visual-img {
+  width: 100%;
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.guide-real-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: var(--transition-smooth);
+}
+
+.guide-real-image:hover {
+  transform: scale(1.02);
+}
+
+body.projector-mode .guide-visual-img {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  background: #ffffff;
+}
+
 
 

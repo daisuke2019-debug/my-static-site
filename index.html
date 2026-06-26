@@ -780,27 +780,8 @@
                 <span>ソースが読み込まれ、チェックが入っていることを確認します（チェックされたソースのみがAIの応答対象になります）。</span>
               </li>
             </ol>
-            <div class="guide-visual-mini pc-sources">
-              <div class="mock-ui-container">
-                <div class="mock-ui-header">
-                  <div class="mock-ui-dot red"></div>
-                  <div class="mock-ui-dot yellow"></div>
-                  <div class="mock-ui-dot green"></div>
-                </div>
-                <div class="mock-ui-body">
-                  <div class="sources-list">
-                    <div class="sources-btn"><i data-lucide="plus" style="width: 8px; height: 8px;"></i> 追加</div>
-                    <div class="source-item-mini"></div>
-                    <div class="source-item-mini"></div>
-                  </div>
-                  <div class="sources-main">
-                    <div class="upload-box-mini">
-                      <i data-lucide="upload-cloud" class="upload-icon-mini" style="width: 14px; height: 14px;"></i>
-                      <div class="upload-text-mini" style="font-size: 6px;">PDF/ドライブ</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="guide-visual-img">
+              <img src="notebooklm_sources_ui.png" alt="NotebookLM ソース追加画面の実際のインターフェース" class="guide-real-image">
             </div>
           </div>
           <!-- チャット -->
@@ -822,26 +803,8 @@
                 <span>画面左側のソースペインにて、回答の根拠となった元の記述箇所が<strong>ハイライト表示</strong>され、裏付けを確認できます。</span>
               </li>
             </ol>
-            <div class="guide-visual-mini pc-chat">
-              <div class="mock-ui-container">
-                <div class="mock-ui-header">
-                  <div class="mock-ui-dot red"></div>
-                  <div class="mock-ui-dot yellow"></div>
-                  <div class="mock-ui-dot green"></div>
-                </div>
-                <div class="mock-ui-body">
-                  <div class="chat-area-mini">
-                    <div class="chat-messages-mini">
-                      <div class="chat-bubble-mini user">資料を要約して</div>
-                      <div class="chat-bubble-mini ai">この資料は...<span class="citation-num">1</span></div>
-                    </div>
-                    <div class="chat-input-mini">
-                      <div class="chat-input-placeholder">質問を入力...</div>
-                      <div class="chat-send-btn-mini"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="guide-visual-img">
+              <img src="notebooklm_chat_citation.png" alt="NotebookLM チャットとソース引用ハイライトの実際の画面" class="guide-real-image">
             </div>
           </div>
           <!-- メモ・スタジオ -->
@@ -863,41 +826,8 @@
                 <span>2人のAIによる対話形式の音声が生成されます。<strong>「カスタマイズ」</strong>から特定のテーマに絞った対話に調整することも可能です。</span>
               </li>
             </ol>
-            <div class="guide-visual-mini pc-studio">
-              <div class="mock-ui-container">
-                <div class="mock-ui-header">
-                  <div class="mock-ui-dot red"></div>
-                  <div class="mock-ui-dot yellow"></div>
-                  <div class="mock-ui-dot green"></div>
-                </div>
-                <div class="mock-ui-body">
-                  <div class="studio-area-mini">
-                    <div class="studio-main-mini">
-                      <div class="studio-card-mini">
-                        <div class="studio-card-title">学習ガイド</div>
-                        <div class="studio-card-line"></div>
-                        <div class="studio-card-line" style="width: 70%;"></div>
-                      </div>
-                      <div class="studio-card-mini">
-                        <div class="studio-card-title">FAQ</div>
-                        <div class="studio-card-line"></div>
-                      </div>
-                    </div>
-                    <div class="studio-sidebar-mini">
-                      <div class="studio-btn-audio">
-                        <i data-lucide="headphones" style="width: 10px; height: 10px;"></i>
-                        <span style="font-size: 5px; font-weight: bold; margin-top: 2px;">音声概要</span>
-                        <div class="audio-waves" style="margin-top: 2px;">
-                          <span class="audio-wave-bar"></span>
-                          <span class="audio-wave-bar"></span>
-                          <span class="audio-wave-bar"></span>
-                          <span class="audio-wave-bar"></span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="guide-visual-img">
+              <img src="notebooklm_audio_overview.png" alt="NotebookLM 音声概要生成とメモの実際の画面" class="guide-real-image">
             </div>
           </div>
         </div>
@@ -928,25 +858,7 @@
                 <span>チャットで<code>「[テーマ]について競合他社の動向をDeep Researchしてレポート化して」</code>と指示を出すだけで起動します。</span>
               </li>
             </ol>
-            <!-- プロンプト入力画面のモックアップUI -->
-            <div class="guide-visual-mini pc-research">
-              <div class="mock-ui-container">
-                <div class="mock-ui-header">
-                  <div class="mock-ui-dot red"></div>
-                  <div class="mock-ui-dot yellow"></div>
-                  <div class="mock-ui-dot green"></div>
-                </div>
-                <div class="mock-ui-body py-1 flex-col justify-between">
-                  <div class="research-status-bar">
-                    <i data-lucide="compass" class="spin-icon"></i>
-                    <span>Deep Research 実行中... (12 of Webソースを巡回)</span>
-                  </div>
-                  <div class="research-progress-mini">
-                    <div class="progress-bar-fill" style="width: 65%;"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
           </div>
 
           <!-- Gamification -->
@@ -968,19 +880,7 @@
                 <span><strong>進捗と到達度の確認</strong>: 途中で<strong>「STATUS」</strong>と入力することで、これまでの選択履歴や獲得した気づき（資料の重要概念）をいつでも振り返ることができます。</span>
               </li>
             </ol>
-            <!-- ゲーム風モックアップUI -->
-            <div class="guide-visual-mini pc-game">
-              <div class="mock-ui-container">
-                <div class="mock-ui-body flex-col justify-center items-center gap-1 text-center">
-                  <div class="game-badge">KNOWLEDGE LEVEL UP!</div>
-                  <div class="game-char-row">
-                    <i data-lucide="shield" style="width: 14px; height: 14px; color: #eab308;"></i>
-                    <span class="font-bold" style="font-size: 8px;">理解度: LV.42 / 100</span>
-                  </div>
-                  <span style="font-size: 6px; color: var(--text-muted);">「音声概要」クエストをクリア！</span>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
@@ -1007,18 +907,8 @@
                 <span>デバイス内のPDFやテキストファイルを選択するか、WebサイトのURLを貼り付けてインポートを実行します。</span>
               </li>
             </ol>
-            <div class="guide-visual-mini sp-sources">
-              <div class="mock-sp-container">
-                <div class="mock-sp-notch"></div>
-                <div class="mock-sp-body">
-                  <div class="sp-sources-body">
-                    <div class="sp-plus-btn-pulse">
-                      <i data-lucide="plus" style="width: 14px; height: 14px;"></i>
-                    </div>
-                    <span style="font-size: 7px; color: var(--text-muted); font-weight: bold; margin-top: 4px;">ソースを追加</span>
-                  </div>
-                </div>
-              </div>
+            <div class="guide-visual-img">
+              <img src="notebooklm_sources_ui.png" alt="NotebookLM ソース追加画面の実際のインターフェース" class="guide-real-image">
             </div>
           </div>
           <!-- チャット -->
@@ -1040,21 +930,8 @@
                 <span>回答内の引用番号（[1]など）をタップすると、<strong>ポップアップ画面で直接引用元テキストを確認</strong>できます。</span>
               </li>
             </ol>
-            <div class="guide-visual-mini sp-chat">
-              <div class="mock-sp-container">
-                <div class="mock-sp-notch"></div>
-                <div class="mock-sp-body">
-                  <div class="sp-chat-body">
-                    <div class="sp-chat-messages">
-                      <div class="sp-bubble user">まとめは？</div>
-                      <div class="sp-bubble ai">要点は3点...</div>
-                    </div>
-                    <div class="sp-chat-input">
-                      <span>質問を入力...</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="guide-visual-img">
+              <img src="notebooklm_chat_citation.png" alt="NotebookLM チャットとソース引用の実際の画面" class="guide-real-image">
             </div>
           </div>
           <!-- スタジオ -->
@@ -1076,23 +953,8 @@
                 <span>バックグラウンドでの再生が開始されます。移動中でもスマホをポケットに入れたまま、ポッドキャスト感覚で学習できます。</span>
               </li>
             </ol>
-            <div class="guide-visual-mini sp-studio">
-              <div class="mock-sp-container">
-                <div class="mock-sp-notch"></div>
-                <div class="mock-sp-body">
-                  <div class="sp-audio-body">
-                    <div class="sp-audio-disc">
-                      <i data-lucide="music" style="width: 14px; height: 14px;"></i>
-                    </div>
-                    <span style="font-size: 7px; color: var(--text-primary); font-weight: bold; margin-top: 4px;">音声の再生中</span>
-                    <div class="sp-audio-controls" style="margin-top: 4px;">
-                      <div class="sp-audio-play">
-                        <i data-lucide="pause" style="width: 8px; height: 8px; fill: black; stroke: none;"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="guide-visual-img">
+              <img src="notebooklm_audio_overview.png" alt="NotebookLM 音声概要の実際の画面" class="guide-real-image">
             </div>
           </div>
         </div>
@@ -1123,19 +985,7 @@
                 <span>ブラウザでNotebookLMを開き、追加ソースからGoogleドライブを選び、先ほどのPDFをインポートしてノートに追加します。</span>
               </li>
             </ol>
-            <!-- ドライブスキャンモックアップ -->
-            <div class="guide-visual-mini sp-scan">
-              <div class="mock-sp-container">
-                <div class="mock-sp-notch"></div>
-                <div class="mock-sp-body flex-col justify-center items-center gap-2">
-                  <div class="scan-area-box">
-                    <i data-lucide="focus" class="scan-focus-i"></i>
-                    <span style="font-size: 5px; color: #22c55e;">領収書を検出中</span>
-                  </div>
-                  <span style="font-size: 6px; color: var(--text-muted);">ドライブへ自動PDF保存</span>
-                </div>
-              </div>
-            </div>
+
           </div>
 
           <!-- 音声解説カスタマイズ -->
@@ -1157,26 +1007,7 @@
                 <span><strong>「再生成」</strong>をタップして、カスタマイズされた新しい音声ポッドキャストを作成します。</span>
               </li>
             </ol>
-            <!-- カスタマイズモックアップ -->
-            <div class="guide-visual-mini sp-customize">
-              <div class="mock-sp-container">
-                <div class="mock-sp-notch"></div>
-                <div class="mock-sp-body flex-col justify-between p-2">
-                  <span class="font-bold" style="font-size: 6px; color: var(--text-primary);">カスタマイズ設定</span>
-                  <div class="flex-col gap-1 w-full">
-                    <div class="setting-row-mini">
-                      <span style="font-size: 5px;">特定のテーマにフォーカス</span>
-                      <div class="setting-toggle active"></div>
-                    </div>
-                    <div class="setting-row-mini">
-                      <span style="font-size: 5px;">話者のトーンをカジュアルに</span>
-                      <div class="setting-toggle"></div>
-                    </div>
-                  </div>
-                  <div class="setting-btn-mini">音声解説を再生成</div>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
       </div>
