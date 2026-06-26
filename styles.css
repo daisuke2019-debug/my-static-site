@@ -3956,4 +3956,62 @@ body.projector-mode .setting-toggle.active::after {
   background: white;
 }
 
+/* ==========================================================================
+   NotebookLM 使い方ガイド：ステップ・タイムライン用スタイル
+   ========================================================================== */
+.guide-step-details {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  z-index: 2;
+  position: relative;
+}
+
+.guide-step-details li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.guide-step-details li a {
+  color: var(--google-blue);
+  text-decoration: none;
+}
+
+.guide-step-details li a:hover {
+  text-decoration: underline;
+}
+
+.step-num-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(168, 85, 247, 0.3);
+  margin-top: 0.1rem;
+}
+
+/* プロジェクターモード（ライトモード）時の設定 */
+body.projector-mode .guide-step-details li {
+  color: #334155;
+}
+
+body.projector-mode .step-num-badge {
+  background: var(--gradient-primary);
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
 

@@ -745,7 +745,7 @@
     <div class="container">
       <div class="section-header text-center mb-8">
         <h2>NotebookLM 使い方ガイド</h2>
-        <p>PCとスマートフォン、それぞれの画面に最適化された操作方法で、情報収集と整理を効率化しましょう。</p>
+        <p>PCとスマートフォン、それぞれの画面に最適化された操作手順で、情報収集と整理を効率化しましょう。</p>
         
         <!-- 切り替えタブ -->
         <div class="guide-tabs">
@@ -764,13 +764,22 @@
           <!-- ソース追加 -->
           <div class="guide-card">
             <div class="guide-card-icon"><i data-lucide="plus-square"></i></div>
-            <h3>1. ソースの追加</h3>
+            <h3>1. ソースの追加・準備</h3>
             <p class="guide-card-subtitle">あらゆる情報をインポート</p>
-            <ul class="guide-card-list">
-              <li><span class="bullet">✦</span> 画面左の<strong>「ソースを追加 (＋)」</strong>をクリック。</li>
-              <li><span class="bullet">✦</span> Googleドライブ、PDF、WebサイトURL、テキスト貼り付けなどから選択。</li>
-              <li><span class="bullet">✦</span> 1ノートブックあたり最大50個、1ソース最大50万語まで対応。</li>
-            </ul>
+            <ol class="guide-step-details">
+              <li>
+                <span class="step-num-badge">1</span>
+                <span><a href="https://notebooklm.google.com" target="_blank" rel="noopener noreferrer">NotebookLM</a> にアクセスし、<strong>「新しいノートブック」</strong>をクリックして新規作成します。</span>
+              </li>
+              <li>
+                <span class="step-num-badge">2</span>
+                <span>画面左の<strong>「ソースを追加 (＋)」</strong>をクリックし、Googleドライブ、ローカルPDF、WebサイトURL、テキスト貼り付けなどから選択します。</span>
+              </li>
+              <li>
+                <span class="step-num-badge">3</span>
+                <span>ソースが読み込まれ、チェックが入っていることを確認します（チェックされたソースのみがAIの応答対象になります）。</span>
+              </li>
+            </ol>
             <div class="guide-visual-mini pc-sources">
               <div class="mock-ui-container">
                 <div class="mock-ui-header">
@@ -797,13 +806,22 @@
           <!-- チャット -->
           <div class="guide-card">
             <div class="guide-card-icon"><i data-lucide="message-square"></i></div>
-            <h3>2. チャットの使い方</h3>
+            <h3>2. チャットと引用の確認</h3>
             <p class="guide-card-subtitle">根拠（ソース）を示すAIと対話</p>
-            <ul class="guide-card-list">
-              <li><span class="bullet">✦</span> 画面下のチャットバーに質問を入力して送信。</li>
-              <li><span class="bullet">✦</span> AIが<strong>アップロードした資料だけを基に</strong>高精度な回答を生成。</li>
-              <li><span class="bullet">✦</span> 回答内の<strong>ソース引用番号</strong>をクリックすると、元の記述箇所を表示。</li>
-            </ul>
+            <ol class="guide-step-details">
+              <li>
+                <span class="step-num-badge">1</span>
+                <span>画面下のチャットバーに質問を入力して送信します。（例：「この資料の要点を3つにまとめて」など）</span>
+              </li>
+              <li>
+                <span class="step-num-badge">2</span>
+                <span>AIがアップロードされた資料だけを基に回答します。回答中の<strong>「ソース引用番号（[1]など）」</strong>をクリックします。</span>
+              </li>
+              <li>
+                <span class="step-num-badge">3</span>
+                <span>画面左側のソースペインにて、回答の根拠となった元の記述箇所が<strong>ハイライト表示</strong>され、裏付けを確認できます。</span>
+              </li>
+            </ol>
             <div class="guide-visual-mini pc-chat">
               <div class="mock-ui-container">
                 <div class="mock-ui-header">
@@ -826,16 +844,25 @@
               </div>
             </div>
           </div>
-          <!-- スタジオ -->
+          <!-- メモ・スタジオ -->
           <div class="guide-card">
             <div class="guide-card-icon"><i data-lucide="sliders"></i></div>
-            <h3>3. スタジオの使い方</h3>
-            <p class="guide-card-subtitle">資料をまとめ・ポッドキャスト化</p>
-            <ul class="guide-card-list">
-              <li><span class="bullet">✦</span> 画面右側の<strong>「Notebookガイド」</strong>を開く。</li>
-              <li><span class="bullet">✦</span> <strong>「音声概要 (Audio Overview)」</strong>で、資料を対話する英語/日本語の音声を生成。</li>
-              <li><span class="bullet">✦</span> FAQ、学習ガイド、タイムライン、メモ作成などのドキュメントをワンクリック自動生成。</li>
-            </ul>
+            <h3>3. メモ作成と音声概要の生成</h3>
+            <p class="guide-card-subtitle">資料の体系化とポッドキャスト化</p>
+            <ol class="guide-step-details">
+              <li>
+                <span class="step-num-badge">1</span>
+                <span>チャット回答の右上にある<strong>「ノートに保存 (Pin)」</strong>アイコンをクリックして、重要な情報をメモとしてピン留めします。</span>
+              </li>
+              <li>
+                <span class="step-num-badge">2</span>
+                <span>画面右上の<strong>「Notebookガイド」</strong>を開き、<strong>「音声概要（Audio Overview）」</strong>の「生成」をクリックします。</span>
+              </li>
+              <li>
+                <span class="step-num-badge">3</span>
+                <span>2人のAIによる対話形式の音声が生成されます。<strong>「カスタマイズ」</strong>から特定のテーマに絞った対話に調整することも可能です。</span>
+              </li>
+            </ol>
             <div class="guide-visual-mini pc-studio">
               <div class="mock-ui-container">
                 <div class="mock-ui-header">
@@ -887,11 +914,20 @@
             <div class="guide-card-icon alt-blue"><i data-lucide="search"></i></div>
             <h3>Fast & Deep Research の使い分け</h3>
             <p class="guide-card-subtitle">最新のAIリサーチ機能を網羅</p>
-            <ul class="guide-card-list">
-              <li><span class="bullet">✦</span> <strong>Fast Research</strong>: Webの最新情報や複数ソースからクイックに要約を抽出します。</li>
-              <li><span class="bullet">✦</span> <strong>Deep Research</strong>: 関連Webページや論文をAIが自動巡回し、多角的なレポートを生成します。</li>
-              <li><span class="bullet">✦</span> プロンプト例: <code>「[テーマ]について競合他社の動向をDeep Researchしてレポート化して」</code></li>
-            </ul>
+            <ol class="guide-step-details">
+              <li>
+                <span class="step-num-badge">1</span>
+                <span><strong>Fast Research</strong>: Webの最新情報や登録した複数ソースからクイックに要約や初期情報を抽出したい場合に利用します。</span>
+              </li>
+              <li>
+                <span class="step-num-badge">2</span>
+                <span><strong>Deep Research</strong>: 関連するWebページや論文をAIが何段階にも渡って自動巡回し、網羅的なレポートを作成します。</span>
+              </li>
+              <li>
+                <span class="step-num-badge">3</span>
+                <span>チャットで<code>「[テーマ]について競合他社の動向をDeep Researchしてレポート化して」</code>と指示を出すだけで起動します。</span>
+              </li>
+            </ol>
             <!-- プロンプト入力画面のモックアップUI -->
             <div class="guide-visual-mini pc-research">
               <div class="mock-ui-container">
@@ -903,7 +939,7 @@
                 <div class="mock-ui-body py-1 flex-col justify-between">
                   <div class="research-status-bar">
                     <i data-lucide="compass" class="spin-icon"></i>
-                    <span>Deep Research 実行中... (12のWebソースを巡回)</span>
+                    <span>Deep Research 実行中... (12 of Webソースを巡回)</span>
                   </div>
                   <div class="research-progress-mini">
                     <div class="progress-bar-fill" style="width: 65%;"></div>
@@ -918,11 +954,20 @@
             <div class="guide-card-icon alt-purple"><i data-lucide="gamepad-2"></i></div>
             <h3>クエスト感覚で学ぶ「ゲーム化」</h3>
             <p class="guide-card-subtitle">ストーリー性のある知識獲得</p>
-            <ul class="guide-card-list">
-              <li><span class="bullet">✦</span> <strong>クエスト（ソース追加）</strong>: PDFやURLを「学習クエスト」としてNotebookに登録。</li>
-              <li><span class="bullet">✦</span> <strong>バトル（AIチャット）</strong>: AIからの突っ込んだ質問やクイズに答えて理解度をテスト。</li>
-              <li><span class="bullet">✦</span> <strong>攻略本（FAQ/学習ガイド）</strong>: 自動生成されたドキュメントを知識の装備として蓄積。</li>
-            </ul>
+            <ol class="guide-step-details">
+              <li>
+                <span class="step-num-badge">1</span>
+                <span><strong>クエスト（情報準備）</strong>: PDFや記事を「学習すべきクエストの書」としてNotebookに追加します。</span>
+              </li>
+              <li>
+                <span class="step-num-badge">2</span>
+                <span><strong>バトル（理解度テスト）</strong>: AIチャットに向かって<code>「この資料から私に3問クイズを出して」</code>と指示し、回答して理解を深めます。</span>
+              </li>
+              <li>
+                <span class="step-num-badge">3</span>
+                <span><strong>攻略本（ドキュメント化）</strong>: 理解が曖昧な部分をまとめたメモを作成し、自動生成FAQと合わせて自分だけの攻略ガイドを作ります。</span>
+              </li>
+            </ol>
             <!-- ゲーム風モックアップUI -->
             <div class="guide-visual-mini pc-game">
               <div class="mock-ui-container">
@@ -946,13 +991,22 @@
           <!-- ソース追加 -->
           <div class="guide-card">
             <div class="guide-card-icon"><i data-lucide="plus-circle"></i></div>
-            <h3>1. ソースの追加</h3>
+            <h3>1. ソースの追加手順</h3>
             <p class="guide-card-subtitle">移動中でも手軽にインプット</p>
-            <ul class="guide-card-list">
-              <li><span class="bullet">✦</span> 上部またはメニューの<strong>「＋」</strong>アイコンをタップ。</li>
-              <li><span class="bullet">✦</span> スマートフォン内のファイル（PDFやTXT）や、クリップボード of URLを指定。</li>
-              <li><span class="bullet">✦</span> 外出先で見つけた有益な記事やPDF資料を、その場ですぐにインポート可能。</li>
-            </ul>
+            <ol class="guide-step-details">
+              <li>
+                <span class="step-num-badge">1</span>
+                <span>スマートフォンのブラウザで NotebookLM にアクセスします。</span>
+              </li>
+              <li>
+                <span class="step-num-badge">2</span>
+                <span>画面上部またはメニュー内の<strong>「＋」アイコン</strong>をタップして、追加ソースの選択画面を表示します。</span>
+              </li>
+              <li>
+                <span class="step-num-badge">3</span>
+                <span>デバイス内のPDFやテキストファイルを選択するか、WebサイトのURLを貼り付けてインポートを実行します。</span>
+              </li>
+            </ol>
             <div class="guide-visual-mini sp-sources">
               <div class="mock-sp-container">
                 <div class="mock-sp-notch"></div>
@@ -970,13 +1024,22 @@
           <!-- チャット -->
           <div class="guide-card">
             <div class="guide-card-icon"><i data-lucide="message-circle"></i></div>
-            <h3>2. チャットの使い方</h3>
+            <h3>2. チャットと引用ポップアップ</h3>
             <p class="guide-card-subtitle">タップ操作で手軽に質問・確認</p>
-            <ul class="guide-card-list">
-              <li><span class="bullet">✦</span> 下部に固定されたチャット入力エリアをタップして質問を入力。</li>
-              <li><span class="bullet">✦</span> モバイル向けに最適化された読みやすいスレッド表示。</li>
-              <li><span class="bullet">✦</span> ソースの参照部分もタップするだけで、ポップアップで手軽に引用元を確認できます。</li>
-            </ul>
+            <ol class="guide-step-details">
+              <li>
+                <span class="step-num-badge">1</span>
+                <span>画面下部に固定されたチャット入力エリアをタップして、質問（例：「この資料のまとめは？」など）を入力し送信します。</span>
+              </li>
+              <li>
+                <span class="step-num-badge">2</span>
+                <span>AIからモバイル向けに読みやすく整理された回答が返ってきます。</span>
+              </li>
+              <li>
+                <span class="step-num-badge">3</span>
+                <span>回答内の引用番号（[1]など）をタップすると、<strong>ポップアップ画面で直接引用元テキストを確認</strong>できます。</span>
+              </li>
+            </ol>
             <div class="guide-visual-mini sp-chat">
               <div class="mock-sp-container">
                 <div class="mock-sp-notch"></div>
@@ -997,13 +1060,22 @@
           <!-- スタジオ -->
           <div class="guide-card">
             <div class="guide-card-icon"><i data-lucide="headphones"></i></div>
-            <h3>3. スタジオの使い方</h3>
-            <p class="guide-card-subtitle">耳と目で学ぶ隙間時間学習</p>
-            <ul class="guide-card-list">
-              <li><span class="bullet">✦</span> 画面右上のメニューまたは<strong>「ガイド」</strong>アイコンをタップ。</li>
-              <li><span class="bullet">✦</span> 生成済みの<strong>「音声概要（Audio Overview）」を再生</strong>して、歩きながらポッドキャスト形式で聴取。</li>
-              <li><span class="bullet">✦</span> 自動生成されたFAQや学習ガイドなどをスマホでスピーディに確認・閲覧。</li>
-            </ul>
+            <h3>3. 音声の再生・隙間時間学習</h3>
+            <p class="guide-card-subtitle">耳と目で学ぶモバイル学習</p>
+            <ol class="guide-step-details">
+              <li>
+                <span class="step-num-badge">1</span>
+                <span>画面右上またはメニューから<strong>「ガイド（Notebook Guide）」</strong>アイコンをタップします。</span>
+              </li>
+              <li>
+                <span class="step-num-badge">2</span>
+                <span>あらかじめPC等で生成した、あるいは新しく生成する<strong>「音声概要 (Audio Overview)」の再生ボタン</strong>をタップします。</span>
+              </li>
+              <li>
+                <span class="step-num-badge">3</span>
+                <span>バックグラウンドでの再生が開始されます。移動中でもスマホをポケットに入れたまま、ポッドキャスト感覚で学習できます。</span>
+              </li>
+            </ol>
             <div class="guide-visual-mini sp-studio">
               <div class="mock-sp-container">
                 <div class="mock-sp-notch"></div>
@@ -1037,11 +1109,20 @@
             <div class="guide-card-icon alt-green"><i data-lucide="scan"></i></div>
             <h3>Googleドライブ自動スキャン連携</h3>
             <p class="guide-card-subtitle">紙の資料をその場で情報資産化</p>
-            <ul class="guide-card-list">
-              <li><span class="bullet">✦</span> <strong>カメラでスキャン</strong>: スマホのGoogleドライブアプリを起動し「スキャン」を選択。</li>
-              <li><span class="bullet">✦</span> <strong>ワンタップPDF化</strong>: 名刺、手書きメモ、本、領収書などを自動トリミングしてPDF化。</li>
-              <li><span class="bullet">✦</span> <strong>即時インポート</strong>: 保存したPDFをNotebookLMへロードし、あなたのプライベート辞書に追加。</li>
-            </ul>
+            <ol class="guide-step-details">
+              <li>
+                <span class="step-num-badge">1</span>
+                <span>スマホの<strong>Googleドライブアプリ</strong>を起動し、右下の「＋」から<strong>「スキャン」</strong>を選択します。</span>
+              </li>
+              <li>
+                <span class="step-num-badge">2</span>
+                <span>カメラで紙の書類（名刺、手書きメモ、本、領収書など）を撮影し、自動補正・PDF化してマイドライブへ保存します。</span>
+              </li>
+              <li>
+                <span class="step-num-badge">3</span>
+                <span>ブラウザでNotebookLMを開き、追加ソースからGoogleドライブを選び、先ほどのPDFをインポートしてノートに追加します。</span>
+              </li>
+            </ol>
             <!-- ドライブスキャンモックアップ -->
             <div class="guide-visual-mini sp-scan">
               <div class="mock-sp-container">
@@ -1060,13 +1141,22 @@
           <!-- 音声解説カスタマイズ -->
           <div class="guide-card-alt">
             <div class="guide-card-icon alt-orange"><i data-lucide="settings-2"></i></div>
-            <h3>音声解説（Audio Overview）の生成手順</h3>
+            <h3>音声解説（Audio Overview）のカスタマイズ手順</h3>
             <p class="guide-card-subtitle">ポッドキャストを自分好みに生成</p>
-            <ul class="guide-card-list">
-              <li><span class="bullet">✦</span> <strong>生成の開始</strong>: 「Notebookガイド」から「音声の会話」の生成ボタンをタップ。</li>
-              <li><span class="bullet">✦</span> <strong>詳細カスタマイズ</strong>: 「カスタマイズ」から、特定のトピックの強調や話者の言語を選択可能。</li>
-              <li><span class="bullet">✦</span> <strong>日・英対応</strong>: 日本語資料から流暢な英語/日本語対話のポッドキャストを自由に作成できます。</li>
-            </ul>
+            <ol class="guide-step-details">
+              <li>
+                <span class="step-num-badge">1</span>
+                <span>「Notebookガイド」を開き、「音声の会話」セクションで<strong>「カスタマイズ (Customize)」</strong>をタップします。</span>
+              </li>
+              <li>
+                <span class="step-num-badge">2</span>
+                <span>「〜の観点に焦点を当てる」「専門用語を分かりやすく解説して」など、AIスピーカーへの指示文を記述します。</span>
+              </li>
+              <li>
+                <span class="step-num-badge">3</span>
+                <span><strong>「再生成」</strong>をタップして、カスタマイズされた新しい音声ポッドキャストを作成します。</span>
+              </li>
+            </ol>
             <!-- カスタマイズモックアップ -->
             <div class="guide-visual-mini sp-customize">
               <div class="mock-sp-container">
