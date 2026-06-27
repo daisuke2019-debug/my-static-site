@@ -68,6 +68,11 @@ h1, h2, h3, h4 {
   letter-spacing: -0.02em;
 }
 
+strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
 .text-gradient {
   background: var(--gradient-primary);
   -webkit-background-clip: text;
@@ -2986,6 +2991,38 @@ body.projector-mode .summary-box p {
   color: #334155 !important;
 }
 
+/* プロジェクターモード時の強制背景切り替え */
+body.projector-mode {
+  background-color: #f8fafc !important;
+  background: #f8fafc !important;
+}
+
+body.projector-mode .notebooklm-guide-section,
+body.projector-mode .diagnostics,
+body.projector-mode .features,
+body.projector-mode .agent-comparison-section,
+body.projector-mode .steps,
+body.projector-mode .pricing,
+body.projector-mode .security-literacy,
+body.projector-mode .faq,
+body.projector-mode .performance {
+  background-color: #f8fafc !important;
+  background: #f8fafc !important;
+}
+
+body.projector-mode .guide-card,
+body.projector-mode .guide-card-alt,
+body.projector-mode .prompt-card,
+body.projector-mode .policy-card,
+body.projector-mode .literacy-card,
+body.projector-mode .faq-item,
+body.projector-mode .pricing-card,
+body.projector-mode .analysis-card {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+  border-color: #cbd5e1 !important;
+}
+
 /* ==========================================================================
    NotebookLM 使い方ガイド セクション (スマホ版・PC版)
    ========================================================================== */
@@ -3089,7 +3126,6 @@ body.projector-mode .summary-box p {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .guide-card::before {
@@ -3772,7 +3808,6 @@ body.projector-mode .sp-chat-input {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 .guide-card-alt::before {
   content: '';
@@ -3933,7 +3968,7 @@ body.projector-mode {
 
 body.projector-mode p,
 body.projector-mode li,
-body.projector-mode span:not(.status-badge),
+body.projector-mode span:not(.status-badge):not(.step-num-badge),
 body.projector-mode textarea {
   color: #0f172a !important;
   font-weight: 500; /* 投影時の文字のかすれを防止 */
@@ -4033,13 +4068,24 @@ body.projector-mode .setting-toggle.active::after {
 }
 
 /* プロジェクターモード（ライトモード）時の設定 */
-body.projector-mode .guide-step-details li {
-  color: #334155;
+body.projector-mode .guide-step-details li,
+body.projector-mode .guide-step-details li span:not(.step-num-badge) {
+  color: #334155 !important;
+}
+
+body.projector-mode .guide-step-details li strong {
+  color: #0f172a !important;
+  font-weight: 700;
+}
+
+body.projector-mode .guide-step-details li a {
+  color: #1a73e8 !important;
 }
 
 body.projector-mode .step-num-badge {
-  background: var(--gradient-primary);
-  color: #ffffff;
+  background: #a855f7 !important; /* フォールバック単色背景 */
+  background: var(--gradient-primary) !important;
+  color: #ffffff !important;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -4258,9 +4304,10 @@ body.projector-mode .guide-visual-img {
    ========================================================================== */
 .feature-icon-row {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
 }
 
 .status-badge {
@@ -4269,7 +4316,10 @@ body.projector-mode .guide-visual-img {
   border-radius: 6px;
   font-weight: 700;
   letter-spacing: 0.02em;
-  white-space: nowrap;
+  white-space: normal;
+  text-align: center;
+  display: inline-block;
+  max-width: 100%;
 }
 
 .badge-restricted {
